@@ -17,11 +17,11 @@ type StrapiArticle = {
     }
 }
 
-interface ArticlePageProps {
+type Props = {
     params: { slug: string }
 }
 
-export default async function ArticlePage({ params }: ArticlePageProps) {
+export default async function Page({ params }: Props) {
     // Récupère l'article correspondant au slug depuis Strapi
     const res = await fetch(
         `http://localhost:1337/api/articles?filters[slug][$eq]=${params.slug}&populate=*`,
