@@ -1,5 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
+
+// Définition du type pour les articles Strapi
 
 type StrapiArticle = {
     id: number
@@ -17,14 +18,12 @@ type StrapiArticle = {
     }
 }
 
-type Props = {
-    params: { slug: string }
-}
+const API_URL = process.env.STRAPI_API_URL || 'http://localhost:1337'
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: { params: { slug: string } }) {
     // Récupère l'article correspondant au slug depuis Strapi
     const res = await fetch(
-        `http://localhost:1337/api/articles?filters[slug][$eq]=${params.slug}&populate=*`,
+        `${API_URL}/api/articles?filters[slug][$eq]=${params.slug}&populate=*`,
         { cache: 'no-store' }
     )
     const { data } = (await res.json()) as { data: StrapiArticle[] }
@@ -40,7 +39,7 @@ export default async function Page({ params }: Props) {
             </h1>
             {article.attributes.image?.data && (
                 <img
-                    src={`http://localhost:1337${article.attributes.image.data.attributes.url}`}
+                    src={`${API_URL}${article.attributes.image.data.attributes.url}`}
                     alt={article.attributes.title}
                     className="w-full rounded-lg mb-8"
                 />
