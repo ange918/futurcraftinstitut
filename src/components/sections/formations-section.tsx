@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
-import Image from 'next/image'
+import React from 'react'
+import Link from 'next/link'
 import {
     FaLaptopCode,
     FaUserTie,
@@ -17,71 +17,6 @@ import {
     FaShoppingCart,
     FaHelicopter,
 } from 'react-icons/fa'
-
-const formations = [
-    {
-        type: 'BACHELOR',
-        title: 'BAC+2 – Développement web et mobile',
-
-        description:
-            'Une formation en 3 ans pour apprendre à concevoir et développer des applications web robustes, intuitives et sécurisées en maîtrisant toutes les étapes du cycle de développement logiciel.',
-        image: '/image/formation1.jpg',
-        button: 'En savoir plus',
-    },
-    {
-        type: 'BACHELOR',
-        title: 'BAC+1 – Web master',
-
-        description:
-            "Découvrez la gestion de l'infrastructure informatique, la sécurité réseau et l'optimisation des systèmes, tout en développant une véritable expertise des technologies de l'information.",
-        image: '/image/formation2.jpg',
-        button: 'En savoir plus',
-    },
-    {
-        type: 'MASTER OF SCIENCE',
-        title: 'BAC+2 – Autonomisation et IA',
-
-        description:
-            'Spécialisez-vous en cyber pour maîtriser la protection des systèmes informatiques, la gestion des risques et la réponse aux incidents de sécurité afin de défendre les infrastructures numériques contre les cybermenaces.',
-        image: '/image/formation3.jpg',
-        button: 'En savoir plus',
-    },
-    {
-        type: 'Marketing digital',
-        title: 'BAC+1 – Marketing digital',
-
-        description:
-            "Spécialisez-vous en IA & Data pour maîtriser le développement d'algorithmes avancés, l'analyse de grandes quantités de données et l'application de techniques d'apprentissage automatique pour résoudre des problèmes complexes.",
-        image: '/image/formation4.jpg',
-        button: 'En savoir plus',
-    },
-    {
-        type: 'MASTER OF SCIENCE',
-        title: 'BAC+1 – Photographie et Montage vidéo',
-        description:
-            "Devenez un chef de projet informatique avec une spécialité en déploiement de projets Green IT pour mettre l'accent sur l'efficacité énergétique, la réduction de l'empreinte carbone et la promotion de pratiques écologiques dans le domaine des technologies numériques.",
-        image: '/image/formation5.jpg',
-        button: 'En savoir plus',
-    },
-    {
-        type: 'BACHELOR',
-        title: 'BAC+3 – Design UX/UI',
-        badges: ['3 ans', 'Alternance dès B2', 'Admission B1 & B3', 'bac+3'],
-        description:
-            "Deviens expert en expérience utilisateur et en design d'interface. Apprends à concevoir des produits numériques intuitifs, esthétiques et accessibles.",
-        image: '/image/formation6.jpg',
-        button: 'En savoir plus',
-    },
-]
-
-const tabs = [
-    { label: 'BACHELOR', filter: (f: any) => f.type === 'BACHELOR' },
-    {
-        label: 'MASTER OF SCIENCE',
-        filter: (f: any) => f.type === 'MASTER OF SCIENCE',
-    },
-    { label: 'TOUT', filter: () => true },
-]
 
 export default function FormationsSection() {
     return (
@@ -105,7 +40,9 @@ export default function FormationsSection() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center items-stretch w-full max-w-6xl mx-auto mt-8 md:mt-12">
                 {/* Cadre 1 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/developpement-web"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -129,13 +66,15 @@ export default function FormationsSection() {
                             plus demandées comme HTML, CSS, JavaScript, React et
                             Node.js.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg hover:cursor-pointer rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 2 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/webmaster"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -158,13 +97,15 @@ export default function FormationsSection() {
                             professionnels. Une formation polyvalente pour les
                             futurs responsables digitaux.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 3 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/photo-cadrage-montage"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -188,13 +129,15 @@ export default function FormationsSection() {
                             vidéo avec des outils comme Adobe Premiere et
                             DaVinci Resolve.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 4 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/graphisme-web-design"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -214,16 +157,19 @@ export default function FormationsSection() {
                         </div>
                         <p className="text-[var(--card-foreground)] text-xs md:text-base mb-2 md:mb-6">
                             Devenez designer polyvalent en maîtrisant le
-                            graphisme print et digital, le design d'interface
-                            (UI) et l'expérience utilisateur (UX).
+                            graphisme print et digital, le design
+                            d&apos;interface (UI) et l&apos;expérience
+                            utilisateur (UX).
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 5 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/secretariat-caisse"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -242,17 +188,19 @@ export default function FormationsSection() {
                             </span>
                         </div>
                         <p className="text-[var(--card-foreground)] text-xs md:text-base mb-2 md:mb-6">
-                            Formez-vous aux métiers de l'assistanat
+                            Formez-vous aux métiers de l&apos;assistanat
                             administratif, de la gestion de caisse et des outils
                             bureautiques.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 6 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/marketing-digital"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -272,16 +220,18 @@ export default function FormationsSection() {
                         </div>
                         <p className="text-[var(--card-foreground)] text-xs md:text-base mb-2 md:mb-6">
                             Apprenez à créer et gérer des campagnes marketing,
-                            optimiser la visibilité d'une marque en ligne et
-                            utiliser les réseaux sociaux pour vendre.
+                            optimiser la visibilité d&apos;une marque en ligne
+                            et utiliser les réseaux sociaux pour vendre.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 7 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/graphisme-serigraphie"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -289,7 +239,7 @@ export default function FormationsSection() {
                             Graphisme et sérigraphie
                         </span>
                         <h3 className="text-base md:text-xl lg:text-2xl font-bold mb-2 md:mb-4">
-                            Créez des designs prêts pour l'impression
+                            Créez des designs prêts pour l&apos;impression
                         </h3>
                         <div className="flex flex-row flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
                             <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">
@@ -304,13 +254,15 @@ export default function FormationsSection() {
                             textile, affiches, flyers et maîtrisez les
                             techniques de sérigraphie.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 8 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/developpement-ia"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -318,8 +270,8 @@ export default function FormationsSection() {
                             Développement IA
                         </span>
                         <h3 className="text-base md:text-xl lg:text-2xl font-bold mb-2 md:mb-4">
-                            Initiez-vous à la programmation de l'intelligence
-                            artificielle
+                            Initiez-vous à la programmation de
+                            l&apos;intelligence artificielle
                         </h3>
                         <div className="flex flex-row flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
                             <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">
@@ -331,16 +283,18 @@ export default function FormationsSection() {
                         </div>
                         <p className="text-[var(--card-foreground)] text-xs md:text-base mb-2 md:mb-6">
                             Découvrez les bases de la data science, du machine
-                            learning et des modèles d'IA pour créer des
+                            learning et des modèles d&apos;IA pour créer des
                             applications intelligentes.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 9 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/maitrise-ia"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -361,16 +315,18 @@ export default function FormationsSection() {
                         </div>
                         <p className="text-[var(--card-foreground)] text-xs md:text-base mb-2 md:mb-6">
                             Apprenez à utiliser efficacement ChatGPT,
-                            Midjourney, ElevenLabs, Suno AI et bien d'autres
-                            pour vos projets pro et créatifs.
+                            Midjourney, ElevenLabs, Suno AI et bien
+                            d&apos;autres pour vos projets pro et créatifs.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 10 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/maintenance-informatique-reseau"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -393,13 +349,15 @@ export default function FormationsSection() {
                             matérielles et logicielles, et à sécuriser les
                             systèmes informatiques.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 11 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/copywriting"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -407,7 +365,7 @@ export default function FormationsSection() {
                             Copywriting
                         </span>
                         <h3 className="text-base md:text-xl lg:text-2xl font-bold mb-2 md:mb-4">
-                            L'art de convaincre avec les mots
+                            L&apos;art de convaincre avec les mots
                         </h3>
                         <div className="flex flex-row flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
                             <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">
@@ -419,16 +377,18 @@ export default function FormationsSection() {
                         </div>
                         <p className="text-[var(--card-foreground)] text-xs md:text-base mb-2 md:mb-6">
                             Apprenez à écrire des textes puissants qui captent
-                            l'attention, vendent des produits et créent de
-                            l'engagement.
+                            l&apos;attention, vendent des produits et créent de
+                            l&apos;engagement.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 12 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/e-commerce"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -450,13 +410,15 @@ export default function FormationsSection() {
                             Apprenez à créer, gérer et promouvoir une boutique
                             en ligne avec Shopify, WordPress ou WooCommerce.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
                 {/* Cadre 13 */}
-                <div className="relative group">
+                <Link
+                    href="/formation/pilotage-drone"
+                    className="relative group block">
                     <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
@@ -479,11 +441,11 @@ export default function FormationsSection() {
                             la photographie, la vidéo, la cartographie ou la
                             surveillance.
                         </p>
-                        <button className="mt-auto bg-[var(--secondary)] text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition">
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </Link>
             </div>
         </section>
     )
