@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function OpenDaySection() {
     return (
-        <section className="w-full py-10 sm:py-16 bg-white text-black px-2 sm:px-4 md:px-8 flex flex-col items-center">
+        <section id="open-day" className="w-full py-10 sm:py-16 bg-white text-black px-2 sm:px-4 md:px-8 flex flex-col items-center">
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-center mb-4">
                 Journées Portes Ouvertes
                 <span className="inline-block w-8 md:w-12 h-1 bg-[var(--secondary)] align-middle ml-2" />
@@ -129,7 +129,7 @@ export default function OpenDaySection() {
                 {/* Orléans */}
                 <div className="flex-1 flex flex-col items-center bg-transparent max-w-md">
                     <Image
-                        src="/image/victoire.jpg"
+                        src="/image/img8.jpg"
                         alt="Orléans"
                         width={400}
                         height={400}

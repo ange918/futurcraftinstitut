@@ -7,17 +7,17 @@ const intervenants = [
     {
         nom: 'Yoan DANSOU',
         titre: 'Co-founder & CTO Nelson',
-        image: '/image/intervenant1.jpg',
+        image: '/image/pro2.jpg',
     },
     {
         nom: 'Hermann Richy',
         titre: 'Formateur en développement web',
-        image: '/image/intervenant2.jpg',
+        image: '/image/pro1.jpg',
     },
     {
         nom: 'Gauthier Ore',
         titre: 'Développeur Fullstack Web & Mobile',
-        image: '/image/intervenant3.jpg',
+        image: '/image/img15.jpg',
     },
     {
         nom: 'Ibidon NDOYE',
@@ -25,9 +25,9 @@ const intervenants = [
         image: '/image/intervenant4.jpg',
     },
     {
-        nom: 'Ange Ndiaye',
+        nom: 'Merveil SUSUNI',
         titre: 'Dévoloppeur web',
-        image: '/image/intervenant5.jpg',
+        image: '/image/img14.jpg',
     },
     {
         nom: 'Victoire Ndiaye',
@@ -43,14 +43,14 @@ export default function EquipePedagogiqueSection() {
         : intervenants.slice(0, 3)
 
     return (
-        <section className="w-full bg-[var(--background)] text-[var(--foreground)] py-10 sm:py-16 flex flex-col items-center px-2 sm:px-4 md:px-8">
+        <section className="w-full bg-[#070526] text-[var(--foreground)] py-10 sm:py-16 flex flex-col items-center px-2 sm:px-4 md:px-8">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-6">
                 Notre équipe d'intervenants
                 <br />
                 pédagogiques
                 <span className="inline-block w-6 h-1 bg-[var(--secondary)] align-middle ml-2" />
             </h2>
-            <button className="border border-[var(--foreground)] rounded-full px-6 sm:px-8 py-2 mb-10 text-base sm:text-lg font-semibold hover:bg-[var(--foreground)] hover:text-[var(--background)] transition">
+            <button className="border border-[var(--foreground)] rounded-full px-6 sm:px-8 py-2 mb-10 text-base sm:text-lg font-semibold hover:bg-[var(--foreground)] hover:text-[var(--background)] transition cursor-pointer">
                 Devenir professeur
             </button>
             <div className="flex flex-col gap-6 md:gap-8 justify-center mb-8 w-full">
@@ -105,7 +105,7 @@ export default function EquipePedagogiqueSection() {
             </div>
             {!showAll && (
                 <button
-                    className="mt-2 px-6 sm:px-8 py-2 border-2 border-[var(--secondary)] rounded-full text-[var(--secondary)] font-semibold text-base sm:text-lg hover:bg-[var(--secondary)] hover:text-[var(--background)] transition"
+                    className="mt-2 px-6 sm:px-8 py-2 border-2 border-[var(--secondary)] rounded-full text-[var(--secondary)] font-semibold text-base sm:text-lg hover:bg-[var(--secondary)] hover:text-[var(--background)] transition cursor-pointer"
                     onClick={() => setShowAll(true)}>
                     Voir plus
                 </button>

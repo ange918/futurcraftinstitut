@@ -35,8 +35,8 @@ export default function About() {
 
     return (
         <div
-            className="min-h-screen w-full flex flex-col items-center justify-start py-8 px-2 mt-20 md:px-8"
-            style={{ background: 'var(--background)' }}>
+            className="min-h-screen w-full flex flex-col items-center justify-start py-8 px-2 mt-20 md:px-2 bg-[#070526]"
+            style={{ background: undefined }}>
             <h1 className="text-3xl md:text-5xl lg:text-6xl text-white font-bold p-4 md:p-10 flex justify-center items-center text-center">
                 Le centre informatique <br /> qui forme des professionnels{' '}
                 <br /> engagés
@@ -52,13 +52,8 @@ export default function About() {
                 sensibilise et forme ses étudiants aux enjeux actuels et <br />
                 futurs liés au numérique.
             </h2>
-            <div className="flex justify-center items-center mb-10">
-                <button className="text-base md:text-lg rounded-full inline-block border border-white px-4 py-2 hover:bg-white hover:text-[#2a0a5c] transition">
-                    <a href="#">Nos formations</a>
-                </button>
-            </div>
             {/* GALLERY */}
-            <div className="w-full max-w-6xl mb-16">
+            <div className="w-full  mb-16">
                 {/* Version mobile/tablette : 3 images côte à côte */}
                 <div className="flex lg:hidden flex-row gap-4 w-full">
                     <Image
@@ -66,47 +61,47 @@ export default function About() {
                         alt="Arcade"
                         width={400}
                         height={400}
-                        className="rounded-2xl border border-white object-cover w-1/3 h-32"
+                        className="rounded-2xl object-cover w-1/3 h-32"
                     />
                     <Image
                         src="/image/hero.jpg"
                         alt="Groupe central"
                         width={600}
                         height={500}
-                        className="rounded-2xl border-4 border-white object-cover w-1/3 h-32"
+                        className="rounded-2xl object-cover w-1/3 h-32"
                     />
                     <Image
                         src="/image/open-day.jpg"
                         alt="Open day"
                         width={400}
                         height={400}
-                        className="rounded-2xl border border-white object-cover w-1/3 h-32"
+                        className="rounded-2xl object-cover w-1/3 h-32"
                     />
                 </div>
                 {/* Version desktop : galerie complète */}
-                <div className="hidden lg:grid lg:grid-cols-3 gap-4 w-full">
+                <div className="hidden lg:grid lg:grid-cols-3 mt-20 gap-4 w-full">
                     <div className="flex flex-col md:flex-row gap-4">
                         <Image
                             src="/image/ange.jpg"
                             alt="Arcade"
                             width={400}
                             height={400}
-                            className="rounded-2xl border border-white object-cover w-full h-40 md:w-52 md:h-full"
+                            className="rounded-2xl object-cover w-full h-40 mt-40 md:w-42 md:h-3/6"
                         />
                         <div className="flex flex-col gap-4">
                             <Image
-                                src="/image/pro1.jpg"
+                                src="/image/img2.jpg"
                                 alt="Classe"
                                 width={400}
                                 height={200}
-                                className="rounded-2xl object-cover h-24 md:h-1/3 w-full"
+                                className="rounded-2xl object-cover h-20 md:h-2/6 w-full"
                             />
                             <Image
-                                src="/image/develop.webp"
+                                src="/image/img6.jpg"
                                 alt="Salon"
                                 width={400}
                                 height={200}
-                                className="rounded-2xl object-cover h-32 md:h-2/3 w-full"
+                                className="rounded-2xl object-cover h-28 md:h-3/6 w-full"
                             />
                         </div>
                     </div>
@@ -116,32 +111,32 @@ export default function About() {
                             alt="Groupe central"
                             width={600}
                             height={500}
-                            className="rounded-2xl border-4 border-white object-cover w-full h-40 md:h-full"
+                            className="rounded-2xl  object-cover mb-40  w-full h-40 md:h-4/5"
                         />
                     </div>
                     <div className="flex flex-col md:flex-row gap-4">
                         <div className="flex flex-col gap-4">
                             <Image
-                                src="/image/pro2.jpg"
+                                src="/image/img3.jpg"
                                 alt="Groupe ville"
                                 width={400}
                                 height={200}
-                                className="rounded-2xl border border-white object-cover w-full h-32 md:h-2/3"
+                                className="rounded-2xl object-cover w-full h-32 md:h-3/6"
                             />
                             <Image
-                                src="/image/Ibidon.jpg"
+                                src="/image/img11.jpg"
                                 alt="Laser game"
                                 width={400}
                                 height={200}
-                                className="rounded-2xl border border-white object-cover w-full h-24 md:h-1/3"
+                                className="rounded-2xl  object-cover w-full h-24 md:h-2/6"
                             />
                         </div>
                         <Image
-                            src="/image/open-day.jpg"
+                            src="/image/img5.jpg"
                             alt="Open day"
                             width={400}
                             height={400}
-                            className="rounded-2xl border border-white object-cover w-full h-40 md:w-52 md:h-full"
+                            className="rounded-2xl object-cover w-full h-40 mt-40 md:w-42 md:h-3/6"
                         />
                     </div>
                 </div>
@@ -178,7 +173,7 @@ export default function About() {
                     </div>
                     <div className="flex-1 flex justify-center items-center">
                         <Image
-                            src="/image/pro1.jpg"
+                            src="/image/img7.jpg"
                             alt="Classe Futurcraft"
                             width={520}
                             height={400}
@@ -191,17 +186,9 @@ export default function About() {
             {/* SECTION : Citation fidèle à la capture */}
             <section
                 ref={citationRef}
-                className="relative w-full overflow-hidden"
-                style={{ background: 'var(--card)' }}>
+                className="relative w-full overflow-hidden bg-[#070526]"
+                style={{ background: undefined }}>
                 {/* Vague blanche en haut */}
-                <svg
-                    className="absolute top-0 left-0 w-full"
-                    height="80"
-                    viewBox="0 0 1920 80"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 80 Q960 0 1920 80 V0 H0 V80Z" fill="#fff" />
-                </svg>
                 <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center py-10 md:py-32 px-2 md:px-8 md:gap-16 gap-6 z-10">
                     {/* Icône guillemets ouvrantes */}
                     <div className="flex-shrink-0 flex items-center justify-center h-full mb-4 md:mb-0">
@@ -242,13 +229,13 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="w-full flex flex-col md:flex-row items-center py-8">
+            <section className="w-full flex flex-col md:flex-row items-center py-8 bg-[#070526]">
                 <div className="max-w-7xl w-full flex flex-col md:flex-row gap-8 md:gap-16 items-center h-full">
                     {/* Image à gauche */}
                     <div className="flex-1 flex justify-center items-start h-full">
                         <div className="overflow-hidden rounded-[3rem] shadow-xl w-full md:w-[520px] h-40 md:h-full bg-gray-200 flex">
                             <Image
-                                src="/image/hero.jpg"
+                                src="/image/img8.jpg"
                                 alt="Valeurs Futurcraft"
                                 width={520}
                                 height={500}
@@ -268,7 +255,7 @@ export default function About() {
                         <div className="flex flex-col gap-8 h-full">
                             {/* Carte 1 */}
                             <div className="flex flex-row gap-6 items-start pb-8 border-b border-[#444]">
-                                <div className="flex items-center justify-center w-12 md:w-16 h-12 md:h-16 border-2 border-[var(--secondary)] rounded-lg mr-2 md:mr-4">
+                                <div className="flex items-center justify-center w-12 px-4 md:w-16 h-12 md:h-16 border-2 border-[var(--secondary)] rounded-lg mr-2 md:mr-4">
                                     {/* Globe SVG */}
                                     <svg
                                         width="32"
@@ -300,7 +287,7 @@ export default function About() {
                                         Le numérique accessible à tous
                                     </h3>
                                     <p className="text-base md:text-lg text-[var(--muted-foreground)]">
-                                        Coda s'implante en région pour offrir
+                                        FuturCraft INSTITUT s'implante en région pour offrir
                                         des formations en informatique au plus
                                         grand nombre.
                                     </p>
@@ -308,7 +295,7 @@ export default function About() {
                             </div>
                             {/* Carte 2 */}
                             <div className="flex flex-row gap-6 items-start pb-8 border-b border-[#444]">
-                                <div className="flex items-center justify-center w-12 md:w-16 h-12 md:h-16 border-2 border-[var(--secondary)] rounded-lg mr-2 md:mr-4">
+                                <div className="flex items-center justify-center px-4 w-12 md:w-16 h-12 md:h-16 border-2 border-[var(--secondary)] rounded-lg mr-2 md:mr-4">
                                     {/* Feuille SVG */}
                                     <svg
                                         width="32"
@@ -337,7 +324,7 @@ export default function About() {
                                         La sobriété numérique
                                     </h3>
                                     <p className="text-base md:text-lg text-[var(--muted-foreground)]">
-                                        Coda sensibilise aux enjeux d'un
+                                        FuturCraft INSTITUT sensibilise aux enjeux d'un
                                         numérique plus responsable envers
                                         l'environnement.
                                     </p>
@@ -345,7 +332,7 @@ export default function About() {
                             </div>
                             {/* Carte 3 */}
                             <div className="flex flex-row gap-6 items-start">
-                                <div className="flex items-center justify-center w-12 md:w-16 h-12 md:h-16 border-2 border-[var(--secondary)] rounded-lg mr-2 md:mr-4">
+                                <div className="flex items-center justify-center w-12 px-4 md:w-16 h-12 md:h-16 border-2 border-[var(--secondary)] rounded-lg mr-2 md:mr-4">
                                     {/* Balance SVG */}
                                     <svg
                                         width="32"
@@ -379,7 +366,7 @@ export default function About() {
                                         L'inclusivité dans la tech
                                     </h3>
                                     <p className="text-base md:text-lg text-[var(--muted-foreground)]">
-                                        Coda souhaite mettre en lumière tous les
+                                    FuturCraft INSTITUT souhaite mettre en lumière tous les
                                         profils dans la tech, notamment les
                                         femmes, trop souvent sous-représentées
                                         dans le monde la tech.
@@ -407,7 +394,7 @@ export default function About() {
                     <div className="flex-1 bg-white rounded-[2.5rem] flex flex-col overflow-hidden shadow-xl max-w-full md:max-w-xl mx-auto min-w-0 md:min-w-[320px]">
                         <div className="h-32 md:h-64 w-full overflow-hidden relative">
                             <img
-                                src="/image/pro1.jpg"
+                                src="/image/img8.jpg"
                                 alt="Qualité pédagogique"
                                 className="w-full h-full object-cover rounded-t-[2.5rem]"
                             />
@@ -465,7 +452,7 @@ export default function About() {
                     <div className="flex-1 bg-white rounded-[2rem] flex flex-col overflow-hidden shadow-lg max-w-xl mx-auto min-w-[320px]">
                         <div className="relative h-64 w-full overflow-hidden">
                             <img
-                                src="/image/pro2.jpg"
+                                src="/image/img9.jpg"
                                 alt="Alternance"
                                 className="w-full h-full object-cover rounded-t-[2rem]"
                             />
@@ -478,9 +465,9 @@ export default function About() {
                                 </span>
                             </h3>
                             <p className="text-lg text-[#070526]">
-                                Nous professionnalisons nos étudiants grâce à
+                            Nous professionnalisons nos étudiants grâce à
                                 l'alternance, du coaching personnalisé, et des
-                                job datings avec notre vaste réseau
+                                job datings, tel que le Programme FUTUR et bien d'autres avec notre vaste réseau 
                                 d'entreprises partenaires.
                             </p>
                         </div>
@@ -489,7 +476,7 @@ export default function About() {
                     <div className="flex-1 bg-white rounded-[2rem] flex flex-col overflow-hidden shadow-lg max-w-xl mx-auto min-w-[320px]">
                         <div className="h-64 w-full overflow-hidden relative">
                             <img
-                                src="/image/develop.webp"
+                                src="/image/img10.jpg"
                                 alt="Green IT"
                                 className="w-full h-full object-cover rounded-t-[2rem]"
                             />
@@ -497,17 +484,12 @@ export default function About() {
                         <div className="p-10 flex flex-col flex-1 pt-0">
                             <h3 className="text-2xl md:text-3xl font-extrabold text-[#070526] mb-4 relative w-fit">
                                 <span className="relative inline-block">
-                                    Le green IT
+                                    Les stages
                                     <span className="block h-1 w-6 bg-[var(--secondary)] rounded absolute left-1/2 -translate-x-1/2 mt-2"></span>
                                 </span>
                             </h3>
                             <p className="text-lg text-[#070526]">
-                                La pollution du numérique équivaut à 4% des
-                                émissions de gaz à effet de serre, soit
-                                l'équivalent de tout le trafic aérien mondial.
-                                Coda s'engage pour sensibiliser et former ses
-                                étudiants aux bonnes pratiques du green IT, à
-                                travers des cours d'éco-conception logicielle.
+                            Grâce à des partenariats avec des entreprises situées à Cotonou, Calavi, Parakou, Lomé et Abidjan, nos étudiants renforcent leurs compétences à travers des stages professionnels de qualité.
                             </p>
                         </div>
                     </div>
@@ -536,7 +518,7 @@ export default function About() {
                     <div className="w-full h-0 pb-[56.25%] relative rounded-2xl overflow-hidden">
                         <iframe
                             className="absolute top-0 left-0 w-full h-full rounded-2xl"
-                            src="https://www.youtube.com/embed/0QwKQ4QbFqA"
+                            src="image/vdo1.mp4"
                             title="Coda, l'école supérieure d'informatique engagée !"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -612,7 +594,7 @@ export default function About() {
                 <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-12 mb-8 md:mb-24 w-full max-w-6xl mx-auto">
                     <div className="flex-1 flex justify-center items-center w-full">
                         <img
-                            src="/image/pro1.jpg"
+                            src="/image/img10.jpg"
                             alt="Séminaires techniques"
                             className="rounded-2xl md:rounded-3xl shadow-xl w-full max-w-xs md:max-w-xl object-cover h-40 md:h-[400px]"
                         />
@@ -703,7 +685,7 @@ export default function About() {
                 <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-12 w-full max-w-6xl mx-auto">
                     <div className="flex-1 flex justify-center items-center w-full">
                         <img
-                            src="/image/Ibidon.jpg"
+                            src="/image/img12.jpg"
                             alt="Associations étudiantes"
                             className="rounded-2xl md:rounded-3xl shadow-xl w-full max-w-xs md:max-w-xl object-cover h-40 md:h-[400px]"
                         />
@@ -745,9 +727,6 @@ export default function About() {
                     </div>
                 </div>
             </section>
-
-            {/* SECTION : Découvrez nos formations */}
-            <FormationsSection />
 
             {/* SECTION : Les fondateurs */}
             <section className="w-full bg-[#070526] flex flex-col items-center py-20 px-2">

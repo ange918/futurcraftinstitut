@@ -87,7 +87,7 @@ export default function ActualiteSection() {
                     Retrouvez toute l'actualité FuturCraft INSTITUT, sur
                     l'ensemble des campus.
                 </p>
-                <button className="bg-[var(--primary)] text-[var(--primary-foreground)] font-bold rounded-full px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg shadow hover:opacity-90 transition">
+                <button className="bg-[var(--primary)] text-[var(--primary-foreground)] font-bold rounded-full px-6 sm:px-8 py-2.5 sm:py-3 text-base sm:text-lg shadow hover:opacity-90 transition cursor-pointer">
                     Tous nos articles
                 </button>
             </div>

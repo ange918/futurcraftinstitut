@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { AnimatedTestimonials } from '../../../src/components/ui/AnimatedTestimonials'
+import { useBrochure } from '../../../src/contexts/BrochureContext'
 
 const testimonials = [
     {
@@ -28,12 +29,16 @@ export default function DeveloppementWebPage() {
     const [openBachelor, setOpenBachelor] = useState<number | null>(null)
     const [openFaq, setOpenFaq] = useState<number | null>(null)
     const [admissionTab, setAdmissionTab] = useState<'B1' | 'B3'>('B1')
-    const [showInfoAlert, setShowInfoAlert] = useState(false)
+    const { setShowBrochure } = useBrochure()
     const pourquoiRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const observer = new window.IntersectionObserver(
-            ([entry]) => setShowInfoAlert(entry.isIntersecting),
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setShowBrochure(true)
+                }
+            },
             { threshold: 0.3 }
         )
         if (pourquoiRef.current) {
@@ -42,7 +47,7 @@ export default function DeveloppementWebPage() {
         return () => {
             if (pourquoiRef.current) observer.unobserve(pourquoiRef.current)
         }
-    }, [])
+    }, [setShowBrochure])
 
     const faq = [
         {
@@ -566,10 +571,7 @@ export default function DeveloppementWebPage() {
             <section className="py-16 px-4 bg-background" ref={pourquoiRef}>
                 <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row gap-12 items-start">
                     {/* Bloc texte */}
-                    <div
-                        className={`flex-1 transition-all duration-300 ${
-                            showInfoAlert ? 'lg:mr-[370px]' : ''
-                        }`}>
+                    <div className="flex-1 transition-all duration-300">
                         <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6 leading-tight">
                             Pourquoi cette formation est
                             <br />
@@ -619,81 +621,7 @@ export default function DeveloppementWebPage() {
                         </p>
                     </div>
                 </div>
-                {/* Bloc Informations flottant desktop, normal mobile */}
-                {showInfoAlert && (
-                    <div>
-                        {/* Desktop : flottant */}
-                        <div className="hidden md:block fixed right-8 bottom-8 z-50 bg-primary rounded-3xl p-10 shadow-2xl text-primary-foreground border-4 border-secondary animate-fade-in max-w-md w-full">
-                            <h3 className="text-2xl font-extrabold mb-6 flex items-center gap-2">
-                                Informations
-                                <span className="text-secondary">_</span>
-                            </h3>
-                            <div className="mb-4">
-                                <div className="text-secondary font-bold text-lg">
-                                    Rentrée
-                                </div>
-                                <div className="text-primary-foreground">
-                                    Septembre 2025
-                                </div>
-                            </div>
-                            <div className="mb-4">
-                                <div className="text-secondary font-bold text-lg">
-                                    Durée
-                                </div>
-                                <div className="text-primary-foreground">
-                                    2 200 h
-                                </div>
-                            </div>
-                            <div className="mb-8">
-                                <div className="text-secondary font-bold text-lg">
-                                    Frais de scolarité
-                                </div>
-                                <div className="text-primary-foreground">
-                                    8 000€ la 1<sup>ère</sup> année
-                                </div>
-                            </div>
-                            <button className="w-full bg-secondary text-secondary-foreground font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:bg-secondary/80 transition-colors flex items-center justify-center gap-2">
-                                Télécharger la Brochure
-                                <span className="text-xl">→</span>
-                            </button>
-                        </div>
-                        {/* Mobile : dans le flux */}
-                        <div className="block md:hidden mt-8 bg-primary rounded-3xl p-10 shadow-2xl text-primary-foreground border-4 border-secondary animate-fade-in max-w-md w-full mx-auto">
-                            <h3 className="text-2xl font-extrabold mb-6 flex items-center gap-2">
-                                Informations
-                                <span className="text-secondary">_</span>
-                            </h3>
-                            <div className="mb-4">
-                                <div className="text-secondary font-bold text-lg">
-                                    Rentrée
-                                </div>
-                                <div className="text-primary-foreground">
-                                    Septembre 2025
-                                </div>
-                            </div>
-                            <div className="mb-4">
-                                <div className="text-secondary font-bold text-lg">
-                                    Durée
-                                </div>
-                                <div className="text-primary-foreground">
-                                    2 200 h
-                                </div>
-                            </div>
-                            <div className="mb-8">
-                                <div className="text-secondary font-bold text-lg">
-                                    Frais de scolarité
-                                </div>
-                                <div className="text-primary-foreground">
-                                    8 000€ la 1<sup>ère</sup> année
-                                </div>
-                            </div>
-                            <button className="w-full bg-secondary text-secondary-foreground font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:bg-secondary/80 transition-colors flex items-center justify-center gap-2">
-                                Télécharger la Brochure
-                                <span className="text-xl">→</span>
-                            </button>
-                        </div>
-                    </div>
-                )}
+
             </section>
 
             {/* Cartes Bachelor Accordéon */}

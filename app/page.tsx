@@ -32,6 +32,7 @@ const testimonials = [
 export default function Home() {
     return (
         <>
+            <div className="mt-20 md:mt-0"></div>
             <HeroSection />
             <OpenDaySection />
             <WhyChooseUsSection />

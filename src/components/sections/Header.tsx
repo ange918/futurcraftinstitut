@@ -13,6 +13,7 @@ import Image from 'next/image'
 import { FiDownload, FiArrowRight } from 'react-icons/fi'
 import Link from 'next/link'
 
+
 interface NavbarProps {
     children: React.ReactNode
     className?: string
@@ -412,24 +413,24 @@ const Header = () => {
                         </Link>
                         {/* Bouton Brochure */}
                         <a
-                            href="#"
-                            className="flex items-center gap-2 px-6 py-2 rounded-full bg-[#1a093e] text-white font-bold text-lg shadow-md border-2 border-[#1a093e] hover:bg-[#2a0a5c] transition">
+                            href="/brochure"
+                            className="flex items-center gap-2 px-6 py-2 rounded-full bg-[#1a093e] text-white font-bold text-lg shadow-md border-2 border-[#1a093e] hover:bg-[#2a0a5c] transition cursor-pointer">
                             <FiDownload className="text-xl" />
                             Brochure
                         </a>
                         {/* Bouton Portes Ouvertes */}
                         <a
-                            href="#"
-                            className="flex items-center gap-2 px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-lg shadow-md border-2 border-orange-500 hover:bg-orange-600 transition">
+                            href="/portes-ouvertes"
+                            className="flex items-center gap-2 px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-lg shadow-md border-2 border-orange-500 hover:bg-orange-600 transition cursor-pointer">
                             Portes Ouvertes
                             <FiArrowRight className="text-xl" />
                         </a>
-                        <NavbarButton
-                            variant="dark"
-                            className="flex items-center gap-2 border-2 border-white bg-transparent text-white hover:bg-white hover:text-black px-6 py-2 rounded-full">
+                        <a
+                            href="/candidater"
+                            className="flex items-center gap-2 border-2 border-white bg-transparent text-white hover:bg-white hover:text-black px-6 py-2 rounded-full transition-colors">
                             Candidater
                             <FiArrowRight className="text-xl" />
-                        </NavbarButton>
+                        </a>
                     </div>
                 </div>
             </NavBody>
@@ -461,24 +462,26 @@ const Header = () => {
                     <div className="flex w-full flex-col gap-4 pt-4">
                         {/* Bouton Brochure - même style que desktop */}
                         <a
-                            href="#"
-                            className="flex items-center gap-2 px-6 py-2 rounded-full bg-[#1a093e] text-white font-bold text-base shadow-md border-2 border-[#1a093e] hover:bg-[#2a0a5c] transition w-full justify-center">
+                            href="/brochure"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="flex items-center gap-2 px-6 py-2 rounded-full bg-[#1a093e] text-white font-bold text-base shadow-md border-2 border-[#1a093e] hover:bg-[#2a0a5c] transition w-full justify-center cursor-pointer">
                             <FiDownload className="text-xl" />
                             Brochure
                         </a>
                         {/* Bouton Portes Ouvertes - même style que desktop */}
                         <a
-                            href="#"
-                            className="flex items-center gap-2 px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-base shadow-md border-2 border-orange-500 hover:bg-orange-600 transition w-full justify-center">
+                            href="/portes-ouvertes"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="flex items-center gap-2 px-6 py-2 rounded-full bg-orange-500 text-white font-bold text-base shadow-md border-2 border-orange-500 hover:bg-orange-600 transition w-full justify-center cursor-pointer">
                             Portes Ouvertes
                             <FiArrowRight className="text-xl" />
                         </a>
-                        <NavbarButton
+                        <a
+                            href="/candidater"
                             onClick={() => setIsMobileMenuOpen(false)}
-                            variant="primary"
-                            className="w-full text-base">
-                            Admissions
-                        </NavbarButton>
+                            className="w-full bg-[var(--secondary)] text-[var(--secondary-foreground)] font-bold px-6 py-3 rounded-full text-base shadow-md border-2 border-[var(--secondary)] hover:bg-[var(--secondary)]/80 transition text-center">
+                            Candidater
+                        </a>
                     </div>
                 </MobileNavMenu>
             </MobileNav>

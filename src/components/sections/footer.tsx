@@ -9,23 +9,6 @@ export default function Footer() {
     return (
         <footer className="relative bg-gradient-to-b from-[#0a091c] to-[#1a0840] text-white pt-48 pb-8 px-2 sm:px-4 md:px-12 overflow-hidden ">
             {/* Pont arrondi large et aplati en haut */}
-            <div
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-[180vw] h-[240px] pointer-events-none select-none"
-                style={{ zIndex: 1 }}>
-                <svg
-                    viewBox="0 0 1800 240"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-full h-full">
-                    <ellipse
-                        cx="900"
-                        cy="240"
-                        rx="900"
-                        ry="120"
-                        fill="var(--primary)"
-                    />
-                </svg>
-            </div>
             <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col pt-10 md:pt-16 pb-8 px-2 sm:px-4 md:px-8">
                 {/* Logo sur la première ligne */}
                 <div className="w-full flex justify-center md:justify-start mb-8">
@@ -43,23 +26,35 @@ export default function Footer() {
                         </h3>
                         <ul className="space-y-2">
                             <li className="font-semibold text-base md:text-lg">
-                                BAC+3 - Développement web & mobile
+                                Développement web & mobile
                             </li>
                             <li className="font-semibold text-base md:text-lg">
-                                BAC+3 - Web master
+                                Motion Design
                             </li>
                             <li className="font-semibold text-base md:text-lg">
-                                BAC+5 - Autonomisation et IA
+                                Intelligence artificielle IA
                             </li>
                             <li className="font-semibold text-base md:text-lg">
-                                BAC+5 - Marketing digital
+                            Marketing digital
                             </li>
                             <li className="font-semibold text-base md:text-lg">
-                                BAC+5 - Photographie et montage vidéo
+                                Photographie et montage vidéo
                             </li>
                             <li className="font-semibold text-base md:text-lg">
-                                BAC+5 - Design web & graphique
+                            Design graphic & web
                             </li>
+                            <li className="font-semibold text-base md:text-lg">
+                            Marketing Digital
+                            </li>
+                            <li className="font-semibold text-base md:text-lg">
+                            Impression textile et plastique
+                            </li>
+                            <li className="font-semibold text-base md:text-lg">
+                                Photographie professionnelle</li>
+                            <li className="font-semibold text-base md:text-lg">
+                                Graphisme et Sérigraphie</li>
+                            <li className="font-semibold text-base md:text-lg">
+                                Maintenance informatique</li>
                         </ul>
                     </div>
                     {/* À propos */}

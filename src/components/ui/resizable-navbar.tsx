@@ -281,8 +281,8 @@ export const MobileNav: React.FC<{
         }}
         transition={{ type: 'spring', stiffness: 200, damping: 50 }}
         className={cn(
-            'relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-white/90 px-0 py-1 md:hidden border border-secondary rounded-3xl',
-            visible && 'bg-white/90 shadow-lg',
+            'relative z-50 flex w-full flex-col items-center justify-between bg-white px-0 py-1 md:hidden border-b border-secondary',
+            visible && 'bg-white shadow-lg',
             className
         )}>
         {children}

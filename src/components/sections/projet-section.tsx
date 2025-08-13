@@ -12,7 +12,7 @@ export default function ProjetSection() {
                 <div className="flex flex-col items-center text-center w-full md:w-auto max-w-xs md:max-w-none mb-8 md:mb-0">
                     <div className="rounded-3xl overflow-hidden shadow-lg w-full">
                         <Image
-                            src="/image/ange.jpg"
+                            src="/image/img13img14.jpg.jpg"
                             alt="Orléans"
                             width={450}
                             height={400}

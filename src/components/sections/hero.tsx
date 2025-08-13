@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function HeroSection() {
     return (
@@ -38,23 +39,13 @@ export default function HeroSection() {
                 </p>
                 {/* Bouton */}
                 <div className="flex justify-center mb-2 sm:mb-4">
-                    <a
-                        href=""
-                        className="px-4 xs:px-6 md:px-8 py-2 xs:py-2.5 md:py-3 rounded-full border-2 border-white bg-[var(--secondary)] text-[var(--secondary-foreground)] text-sm xs:text-base md:text-lg font-bold hover:bg-white hover:text-[#1a0840] transition-colors duration-200 shadow-lg"
+                    <Link
+                        href="/about"
+                        className="px-4 xs:px-6 md:px-8 py-2 xs:py-2.5 md:py-3 rounded-full border-2 border-white bg-[var(--secondary)] text-[var(--secondary-foreground)] text-sm xs:text-base md:text-lg font-bold hover:bg-white hover:text-[#1a0840] transition-colors duration-200 shadow-lg cursor-pointer"
                         aria-label="Découvrir le centre">
                         Découvrir le centre
-                    </a>
+                    </Link>
                 </div>
-            </div>
-            {/* SVG vague/pont bas */}
-            <div className="absolute left-0 bottom-0 w-full overflow-hidden leading-none">
-                <svg
-                    viewBox="0 0 1920 340"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-full h-[80px] sm:h-[120px] md:h-[180px] lg:h-[260px] xl:h-[340px]">
-                    <path d="M0 0C320 80 1600 80 1920 0V340H0V0Z" fill="#fff" />
-                </svg>
             </div>
         </section>
     )

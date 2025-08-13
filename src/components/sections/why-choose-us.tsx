@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function WhyChooseUsSection() {
     return (
-        <section className="relative w-full bg-[var(--background)] text-[var(--foreground)] pt-10 sm:pt-16 pb-16 sm:pb-24 overflow-hidden px-2 sm:px-4 md:px-8">
+        <section className="relative w-full bg-[#070526] text-[var(--foreground)] pt-10 sm:pt-16 pb-16 sm:pb-24 overflow-hidden px-2 sm:px-4 md:px-8">
             {/* Vague en haut */}
             <div
                 className="absolute top-0 left-0 w-full h-16 sm:h-24 md:h-32 lg:h-40"
@@ -30,7 +30,7 @@ export default function WhyChooseUsSection() {
                     <div className="flex flex-col md:flex-row gap-4 flex-nowrap justify-center items-center">
                         <div className="bg-[var(--card)] rounded-xl p-4 md:p-6 lg:p-8 flex items-center justify-center shadow-md min-w-[180px] md:min-w-[200px] lg:min-w-[240px] min-h-[100px] md:min-h-[100px] lg:min-h-[120px] max-w-[95vw]">
                             <Image
-                                src="/image/develop.webp"
+                                src="/image/img9.jpg"
                                 alt="Qualiopi"
                                 width={400}
                                 height={180}
@@ -39,7 +39,7 @@ export default function WhyChooseUsSection() {
                         </div>
                         <div className="bg-[var(--card)] rounded-xl p-4 md:p-6 lg:p-8 flex items-center justify-center shadow-md min-w-[180px] md:min-w-[200px] lg:min-w-[240px] min-h-[100px] md:min-h-[100px] lg:min-h-[120px] max-w-[95vw]">
                             <Image
-                                src="/image/hero.jpg"
+                                src="/image/img8.jpg"
                                 alt="Compétences"
                                 width={400}
                                 height={180}
