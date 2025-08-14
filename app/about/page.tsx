@@ -753,35 +753,33 @@ export default function About() {
                     {/* Léni Maroglou */}
                     <div className="flex-1">
                         <h3 className="text-white text-3xl md:text-4xl font-bold mb-2">
-                            Léni Maroglou
+                            Yoan Melson DANSOU
                         </h3>
                         <div className="text-[var(--secondary)] text-xl font-semibold mb-2">
-                            Co-fondateur
+                         Fondateur
                         </div>
                         <p className="text-gray-300 text-lg">
-                            Ingénieur de l'école Centrale de Lille et diplômé de
-                            HEC Paris, Léni est un entrepreneur expérimenté dans
-                            le domaine de l'éducation. Il s'investit pour
-                            intégrer le Green IT et les bonnes pratiques de
-                            sobriété numérique comme un standard au sein de
-                            FuturCraft.
+                        Yoan Melson DANSOU est un passionné des technologies de l'information. Après un début d'études en droit à l’Université d’Abomey-Calavi, il se tourne en 2017 vers le numérique, sa véritable vocation.
+
+Il fonde alors E-ENTREPRISE, Programme FUTUR et FuturCraft INSTITUT, des initiatives dédiées à l’innovation et à la formation dans le domaine des TIC.
+
+Aujourd’hui, il est entrepreneur, Prompt Engineer et formateur en intelligence artificielle. Il intervient dans plusieurs centres de formation et universités du Bénin pour former les talents de demain.
                         </p>
                     </div>
                     {/* Marin Vogler */}
                     <div className="flex-1">
                         <h3 className="text-white text-3xl md:text-4xl font-bold mb-2">
-                            Marin Vogler
+                            Gauthier I. ORE
                         </h3>
                         <div className="text-[var(--secondary)] text-xl font-semibold mb-2">
                             Co-fondateur
                         </div>
                         <p className="text-gray-300 text-lg">
-                            Diplômé X-HEC Paris, Marin s'oriente très rapidement
-                            dans le monde de l'orientation scolaire et du
-                            numérique. Il s'engage en faveur de la
-                            décentralisation des offres de formation en région,
-                            pour un monde du numérique accessible à toutes et
-                            tous.
+                        Ore Gauthier est un passionné de pédagogie et de développement personnel. Fondateur de Model Academy, il œuvre pour la formation et l’épanouissement des jeunes talents de la mode à travers des approches éducatives innovantes.
+
+Il est également promoteur des Africa Fashion Awards, un événement qui valorise la créativité et les talents de la mode africaine.
+
+En tant que co-fondateur de FuturCraft INSTITUT, il s’implique activement dans la promotion de l’innovation, de l’entrepreneuriat et des compétences du futur sur le continent.
                         </p>
                     </div>
                 </div>

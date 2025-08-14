@@ -10,22 +10,40 @@ import { AnimatedTestimonials } from '../src/components/ui/AnimatedTestimonials'
 
 const testimonials = [
     {
-        src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=500&h=500&facepad=2',
-        name: 'Alice Dupont',
-        designation: 'Étudiante en Web',
-        quote: "J'ai adoré la formation, l'équipe pédagogique est très à l'écoute et les projets sont concrets !",
+        src: '/image/carmel.jpg',
+        name: 'Carmel DANGBEGNON',
+        designation: 'Prompt Engineer',
+        quote: 'Grâce à FuturCraft Institut, j\'ai ma soeur qui a pu acquérir des compétences concrètes et trouver un emploi rapidement. Les formateurs sont passionnés et toujours à l\'écoute.',
     },
     {
-        src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=500&h=500&facepad=2',
-        name: 'Mohamed Benali',
-        designation: 'Développeur Junior',
-        quote: "Grâce à FuturCraft, j'ai trouvé une alternance et j'ai pu progresser très vite.",
+        src: '/image/prego.jpg',
+        name: 'Président DJANGOUN',
+        designation: 'Influenceur artiste chanteur',
+        quote: 'La pédagogie est très pratique et adaptée au marché africain. J\'ai adoré les projets collaboratifs et l\'ambiance familiale du centre. En quelques mois de formation, leurs étudiants ont pu me créer mon site web personnel et celui de mon concert présidentiel.',
     },
     {
-        src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=500&h=500&facepad=2',
-        name: 'Sophie Martin',
-        designation: 'Graphiste',
-        quote: 'Les intervenants sont passionnés et nous transmettent leur savoir avec enthousiasme.',
+        src: '/image/wiliam.jpg',
+        name: 'William ZOMANHOUN',
+        designation: 'Promotteur  d\'évenement',
+        quote: 'Les outils et technologies enseignés sont à la pointe. J\'ai pu me spécialiser en Intélligence artificielle en quelques mois.',
+    },
+    {
+        src: '/image/houessinon.jpg',
+        name: 'Carlos HOUESSINON',
+        designation: 'Directeur d\'école',
+        quote: 'Former la nouvelle génération de talents africains est une fierté. Les étudiants sont motivés et les résultats sont là !',
+    },
+    {
+        src: '/image/nicodem.jpg',
+        name: 'Nicodème ATAKOUN',
+        designation: 'Directeur d\'école',
+        quote: 'FuturCraft Institut offre un environnement propice à l\'innovation et à l\'excellence. Je recommande vivement à tous les passionnés du numérique.',
+    },
+    {
+        src: '/image/cedric.jpg',
+        name: 'Cédric Magloire AKOFODJI',
+        designation: 'Développeur web',
+        quote: 'L\'approche pratique et moderne de FuturCraft est hors pair sur leurs cours sur l\'intelligence artificielle. Une formation exceptionnelle !',
     },
 ]
 

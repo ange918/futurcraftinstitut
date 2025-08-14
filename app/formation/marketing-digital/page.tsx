@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { AnimatedTestimonials } from '../../../src/components/ui/AnimatedTestimonials'
+import Image from 'next/image'
 
 export default function MarketingDigitalPage() {
     const [openBachelor, setOpenBachelor] = useState<number | null>(null)

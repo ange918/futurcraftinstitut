@@ -45,7 +45,7 @@ export default function CodaChiffresSection() {
                             : ''
                     }`}>
                     <span className="text-[4.5rem] md:text-[5.5rem] font-extrabold text-[var(--secondary)] leading-none">
-                        6 ms à 2 ans
+                        6 mois à 2 ans
                     </span>
                     <p className="text-xl text-white text-right mt-2 max-w-[500px]">
                         Pour une formation complète

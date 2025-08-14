@@ -6,23 +6,23 @@ import Image from 'next/image'
 const intervenants = [
     {
         nom: 'Yoan DANSOU',
-        titre: 'Co-founder & CTO Nelson',
+        titre: 'Co-founder & Prompt engineer',
         image: '/image/pro2.jpg',
     },
     {
         nom: 'Hermann Richy',
         titre: 'Formateur en développement web',
-        image: '/image/pro1.jpg',
+        image: '/image/Herman.jpg',
     },
     {
         nom: 'Gauthier Ore',
-        titre: 'Développeur Fullstack Web & Mobile',
-        image: '/image/img15.jpg',
+        titre: 'Directeur des stages et emplois',
+        image: '/image/gauthier.jpg',
     },
     {
-        nom: 'Ibidon NDOYE',
-        titre: 'Data Scientist',
-        image: '/image/intervenant4.jpg',
+        nom: 'SEDAGONGJI Hugues Mahugnon',
+        titre: 'Formateur en cadrage & montage',
+        image: '/image/Mahugnon.jpg',
     },
     {
         nom: 'Merveil SUSUNI',
@@ -30,9 +30,9 @@ const intervenants = [
         image: '/image/img14.jpg',
     },
     {
-        nom: 'Victoire Ndiaye',
-        titre: 'Développeuse Mobile',
-        image: '/image/intervenant6.jpg',
+        nom: 'Private DANSOU',
+        titre: 'Sécrétaire de direction',
+        image: '/image/private.jpg',
     },
 ]
 

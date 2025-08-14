@@ -27,13 +27,13 @@ export default function WhyChooseUsSection() {
                         <br />rejoindre FuturCraft INSTITUT ?
                     </h2>
                 
-                        <div className="flex items-center justify-center min-w-[360px] md:min-w-[450px] lg:min-w-[540px] min-h-[200px] md:min-h-[240px] lg:min-h-[300px] max-w-[95vw]">
+                        <div className="flex items-center justify-center min-w-[150px] md:min-w-[450px] lg:min-w-[450px] min-h-[200px] md:min-h-[240px] lg:min-h-[300px] max-w-[67vw]">
                             <Image
                                 src="/image/img9.jpg"
                                 alt="Qualiopi"
                                 width={400}
                                 height={180}
-                                className="w-[360px] md:w-[450px] lg:w-[540px] h-[200px] md:h-[240px] lg:h-[300px] rounded-xl"
+                                className="w-[360px] md:w-[400px] lg:w-[540px] h-[200px] md:h-[240px] lg:h-[300px] rounded-xl"
                             />
                         </div>
                        

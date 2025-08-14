@@ -200,8 +200,7 @@ export default function CopywritingPage() {
                             {openBachelor === idx && (
                                 <div className="animate-fade-in mt-2 text-muted-foreground">
                                     <p>
-                                        Contenu détaillé sur {module} (à
-                                        personnaliser selon le programme réel).
+                                       Bonjour
                                     </p>
                                 </div>
                             )}

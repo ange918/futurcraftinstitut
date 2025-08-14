@@ -457,8 +457,7 @@ export default function FormationsSection() {
                         </span>
                         <h3 className="text-base md:text-xl lg:text-2xl font-bold mb-2 md:mb-4">
                         Une formation intensive pour maîtriser les techniques de trading et 
-                            l'analyse des marchés financiers. Apprenez à trader en toute sécurité 
-                            avec une approche professionnelle.
+                            l'analyse des marchés financiers.
                         </h3>
                         <div className="flex flex-row flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
                             <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">
@@ -469,9 +468,7 @@ export default function FormationsSection() {
                             </span>
                         </div>
                         <p className="text-[var(--card-foreground)] text-xs md:text-base mb-2 md:mb-6">
-                            Apprenez à piloter des drones en toute sécurité pour
-                            la photographie, la vidéo, la cartographie ou la
-                            surveillance.
+                        Apprenez à trader en toute sécurité avec une approche professionnelle.
                         </p>
                         <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
                             En savoir plus

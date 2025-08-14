@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { AnimatedTestimonials } from '../../../src/components/ui/AnimatedTestimonials'
+import Image from 'next/image'
 
 const testimonials = [
     {
@@ -600,6 +601,19 @@ export default function DeveloppementWebPage() {
                             augmentation.
                         </p>
                     </div>
+                    {/* Image illustrative */}
+                    <div className="flex-1 flex items-center justify-center">
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <Image
+                                src="/image/img2.jpg"
+                                alt="Étudiants en développement web"
+                                width={400}
+                                height={300}
+                                className="w-full max-w-md h-64 object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                    </div>
                 </div>
 
             </section>
@@ -731,6 +745,19 @@ export default function DeveloppementWebPage() {
                         Rejoindre la formation
                         <span className="text-secondary">_</span>
                     </h2>
+                    {/* Image illustrative */}
+                    <div className="flex justify-center mb-12">
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <Image
+                                src="/image/img6.jpg"
+                                alt="Étudiants en formation"
+                                width={600}
+                                height={300}
+                                className="w-full max-w-2xl h-48 object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        </div>
+                    </div>
                     {/* Onglets */}
                     <div className="flex justify-center mb-12">
                         <div className="flex gap-2 bg-[#181a20] rounded-full p-2">
