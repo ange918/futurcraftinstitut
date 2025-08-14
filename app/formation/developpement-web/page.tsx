@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import { AnimatedTestimonials } from '../../../src/components/ui/AnimatedTestimonials'
-import { useBrochure } from '../../../src/contexts/BrochureContext'
 
 const testimonials = [
     {
@@ -29,25 +28,6 @@ export default function DeveloppementWebPage() {
     const [openBachelor, setOpenBachelor] = useState<number | null>(null)
     const [openFaq, setOpenFaq] = useState<number | null>(null)
     const [admissionTab, setAdmissionTab] = useState<'B1' | 'B3'>('B1')
-    const { setShowBrochure } = useBrochure()
-    const pourquoiRef = useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        const observer = new window.IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setShowBrochure(true)
-                }
-            },
-            { threshold: 0.3 }
-        )
-        if (pourquoiRef.current) {
-            observer.observe(pourquoiRef.current)
-        }
-        return () => {
-            if (pourquoiRef.current) observer.unobserve(pourquoiRef.current)
-        }
-    }, [setShowBrochure])
 
     const faq = [
         {
@@ -568,7 +548,7 @@ export default function DeveloppementWebPage() {
             </section>
 
             {/* Pourquoi cette formation est faite pour toi */}
-            <section className="py-16 px-4 bg-background" ref={pourquoiRef}>
+            <section className="py-16 px-4 bg-background">
                 <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row gap-12 items-start">
                     {/* Bloc texte */}
                     <div className="flex-1 transition-all duration-300">
