@@ -21,41 +21,23 @@ export default function WhyChooseUsSection() {
             </div>
             <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-12 px-2 md:px-8 z-10">
                 {/* Colonne gauche */}
-                <div className="flex-1 flex flex-col items-center justify-center gap-6 md:gap-8">
+                <div className="flex-1 flex flex-col items-center w-1/2 justify-center gap-6 md:gap-8">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-[var(--foreground)] text-center md:text-left">
                         Pourquoi
-                        <br />
-                        rejoindre FuturCraft INSTITUT ?
+                        <br />rejoindre FuturCraft INSTITUT ?
                     </h2>
-                    <div className="flex flex-col md:flex-row gap-4 flex-nowrap justify-center items-center">
-                        <div className="bg-[var(--card)] rounded-xl p-4 md:p-6 lg:p-8 flex items-center justify-center shadow-md min-w-[180px] md:min-w-[200px] lg:min-w-[240px] min-h-[100px] md:min-h-[100px] lg:min-h-[120px] max-w-[95vw]">
+                
+                        <div className="flex items-center justify-center min-w-[360px] md:min-w-[450px] lg:min-w-[540px] min-h-[200px] md:min-h-[240px] lg:min-h-[300px] max-w-[95vw]">
                             <Image
                                 src="/image/img9.jpg"
                                 alt="Qualiopi"
                                 width={400}
                                 height={180}
-                                className="w-[180px] md:w-[200px] lg:w-[240px] h-[100px] md:h-[100px] lg:h-[120px]"
+                                className="w-[360px] md:w-[450px] lg:w-[540px] h-[200px] md:h-[240px] lg:h-[300px] rounded-xl"
                             />
                         </div>
-                        <div className="bg-[var(--card)] rounded-xl p-4 md:p-6 lg:p-8 flex items-center justify-center shadow-md min-w-[180px] md:min-w-[200px] lg:min-w-[240px] min-h-[100px] md:min-h-[100px] lg:min-h-[120px] max-w-[95vw]">
-                            <Image
-                                src="/image/img8.jpg"
-                                alt="Compétences"
-                                width={400}
-                                height={180}
-                                className="w-[180px] md:w-[200px] lg:w-[240px] h-[100px] md:h-[100px] lg:h-[120px]"
-                            />
-                        </div>
-                        <div className="bg-[var(--card)] rounded-xl p-4 md:p-6 lg:p-8 flex items-center justify-center shadow-md min-w-[180px] md:min-w-[200px] lg:min-w-[240px] min-h-[100px] md:min-h-[100px] lg:min-h-[120px] max-w-[95vw]">
-                            <Image
-                                src="/image/open-day.jpg"
-                                alt="Ministère du Travail"
-                                width={400}
-                                height={180}
-                                className="w-[180px] md:w-[200px] lg:w-[240px] h-[100px] md:h-[100px] lg:h-[120px]"
-                            />
-                        </div>
-                    </div>
+                       
+                    
                 </div>
                 {/* Colonne droite */}
                 <div className="flex-1 flex flex-col gap-10 md:gap-16 mt-8 md:mt-0">

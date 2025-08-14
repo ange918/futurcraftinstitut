@@ -35,15 +35,14 @@ export default function FormationsSection() {
             </h2>
             <p className="text-base md:text-xl lg:text-2xl text-gray-300 text-center max-w-3xl mb-6 md:mb-12">
                 FuturCraft propose des formations professionnalisantes et
-                diplômantes qui délivrent des titres certifiés et enregistrés au
-                RNCP de BAC+3 à BAC+5.
+                diplômantes qui délivrent des titres certifiés d'une durée de 6 mois à 2 ans.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 justify-center items-stretch w-full max-w-6xl mx-auto mt-8 md:mt-12">
                 {/* Cadre 1 */}
                 <Link
                     href="/formation/developpement-web"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaLaptopCode className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -75,7 +74,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/webmaster"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaUserTie className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -106,7 +105,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/photo-cadrage-montage"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaCamera className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -138,7 +137,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/graphisme-web-design"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaPaintBrush className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -170,7 +169,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/secretariat-caisse"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaCashRegister className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -201,7 +200,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/marketing-digital"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaBullhorn className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -232,7 +231,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/graphisme-serigraphie"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaTshirt className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -263,7 +262,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/developpement-ia"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaRobot className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -295,7 +294,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/maitrise-ia"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaBrain className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -307,7 +306,7 @@ export default function FormationsSection() {
                         </h3>
                         <div className="flex flex-row flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
                             <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">
-                                700.000 FCFA
+                                70.000 FCFA
                             </span>
                             <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">
                                 3 mois
@@ -327,7 +326,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/maintenance-informatique-reseau"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaTools className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -358,7 +357,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/copywriting"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaPenNib className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -389,7 +388,7 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/e-commerce"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaShoppingCart className="inline-block text-[var(--secondary)] text-lg" />{' '}
@@ -419,11 +418,42 @@ export default function FormationsSection() {
                 <Link
                     href="/formation/pilotage-drone"
                     className="relative group block">
-                    <div className="absolute top-4 left-4 w-full h-full bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
                     <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
                         <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
                             <FaHelicopter className="inline-block text-[var(--secondary)] text-lg" />{' '}
                             Pilotage de drone
+                        </span>
+                        <h3 className="text-base md:text-xl lg:text-2xl font-bold mb-2 md:mb-4">
+                            Maîtrisez le ciel avec les drones professionnels
+                        </h3>
+                        <div className="flex flex-row flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
+                            <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">
+                                100.000 FCFA
+                            </span>
+                            <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">
+                                1 mois
+                            </span>
+                        </div>
+                        <p className="text-[var(--card-foreground)] text-xs md:text-base mb-2 md:mb-6">
+                            Apprenez à piloter des drones en toute sécurité pour
+                            la photographie, la vidéo, la cartographie ou la
+                            surveillance.
+                        </p>
+                        <span className="mt-auto bg-[var(--secondary)] hover:cursor-pointer text-[var(--primary-foreground)] font-bold text-sm md:text-lg rounded-full px-4 md:px-8 py-2 md:py-3 w-fit hover:bg-[var(--primary)] transition block text-center">
+                            En savoir plus
+                        </span>
+                    </div>
+                </Link>
+                 {/* Cadre 14 */}
+                 <Link
+                    href="/formation/pilotage-drone"
+                    className="relative group block">
+                    <div className="absolute top-4 left-4 right-0 bottom-0 bg-[#22223b] rounded-xl z-0 group-hover:bg-[var(--secondary)] group-active:bg-[var(--secondary)] transition-colors duration-300"></div>
+                    <div className="relative bg-[var(--card)] rounded-xl shadow-2xl p-4 md:p-6 z-10 flex flex-col h-full">
+                        <span className="text-[var(--secondary)] font-bold text-base mb-2 flex items-center gap-2">
+                            <FaHelicopter className="inline-block text-[var(--secondary)] text-lg" />{' '}
+                            Trading
                         </span>
                         <h3 className="text-base md:text-xl lg:text-2xl font-bold mb-2 md:mb-4">
                             Maîtrisez le ciel avec les drones professionnels

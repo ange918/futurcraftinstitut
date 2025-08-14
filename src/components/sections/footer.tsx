@@ -1,9 +1,10 @@
 import {
-    FaFacebookF,
-    FaInstagram,
-    FaTiktok,
-    FaLinkedinIn,
+	FaFacebookF,
+	FaInstagram,
+	FaTiktok,
+	FaLinkedinIn,
 } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function Footer() {
     return (
@@ -24,38 +25,73 @@ export default function Footer() {
                         <h3 className="font-bold text-lg md:text-xl mb-4">
                             Formations
                         </h3>
-                        <ul className="space-y-2">
-                            <li className="font-semibold text-base md:text-lg">
-                                Développement web & mobile
-                            </li>
-                            <li className="font-semibold text-base md:text-lg">
-                                Motion Design
-                            </li>
-                            <li className="font-semibold text-base md:text-lg">
-                                Intelligence artificielle IA
-                            </li>
-                            <li className="font-semibold text-base md:text-lg">
-                            Marketing digital
-                            </li>
-                            <li className="font-semibold text-base md:text-lg">
-                                Photographie et montage vidéo
-                            </li>
-                            <li className="font-semibold text-base md:text-lg">
-                            Design graphic & web
-                            </li>
-                            <li className="font-semibold text-base md:text-lg">
-                            Marketing Digital
-                            </li>
-                            <li className="font-semibold text-base md:text-lg">
-                            Impression textile et plastique
-                            </li>
-                            <li className="font-semibold text-base md:text-lg">
-                                Photographie professionnelle</li>
-                            <li className="font-semibold text-base md:text-lg">
-                                Graphisme et Sérigraphie</li>
-                            <li className="font-semibold text-base md:text-lg">
-                                Maintenance informatique</li>
-                        </ul>
+					<ul className="space-y-2">
+						<li>
+							<Link href="/formation/developpement-web" className="font-semibold text-base md:text-lg hover:underline">
+								Développement web
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/webmaster" className="font-semibold text-base md:text-lg hover:underline">
+								Webmaster
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/photo-cadrage-montage" className="font-semibold text-base md:text-lg hover:underline">
+								Photographie, cadrage et montage vidéo
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/graphisme-web-design" className="font-semibold text-base md:text-lg hover:underline">
+								Graphisme et web design
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/secretariat-caisse" className="font-semibold text-base md:text-lg hover:underline">
+								Secrétariat et caisse
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/marketing-digital" className="font-semibold text-base md:text-lg hover:underline">
+								Marketing digital
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/graphisme-serigraphie" className="font-semibold text-base md:text-lg hover:underline">
+								Graphisme et sérigraphie
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/developpement-ia" className="font-semibold text-base md:text-lg hover:underline">
+								Développement IA
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/maitrise-ia" className="font-semibold text-base md:text-lg hover:underline">
+								Maîtrise IA
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/maintenance-informatique-reseau" className="font-semibold text-base md:text-lg hover:underline">
+								Maintenance informatique & réseau
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/copywriting" className="font-semibold text-base md:text-lg hover:underline">
+								Copywriting
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/e-commerce" className="font-semibold text-base md:text-lg hover:underline">
+								E-commerce
+							</Link>
+						</li>
+						<li>
+							<Link href="/formation/pilotage-drone" className="font-semibold text-base md:text-lg hover:underline">
+								Pilotage de drone
+							</Link>
+						</li>
+					</ul>
                     </div>
                     {/* À propos */}
                     <div className="min-w-0 sm:min-w-[140px] mb-8 sm:mb-0 w-full sm:w-auto">

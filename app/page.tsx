@@ -32,15 +32,15 @@ const testimonials = [
 export default function Home() {
     return (
         <>
-            <div className="mt-20 md:mt-0"></div>
+            {/* Pas d'offset sur la home en mobile si header caché */}
             <HeroSection />
-            <OpenDaySection />
-            <WhyChooseUsSection />
             <FormationsSection />
+            <WhyChooseUsSection />
             <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
-            <CodaChiffresSection />
             <ProjetSection />
+            <OpenDaySection />
             <EquipePedagogiqueSection />
+            <CodaChiffresSection />
             <ActualiteSection />
         </>
     )

@@ -38,6 +38,7 @@ const formations = [
     { name: 'Copywriting', link: '/formation/copywriting' },
     { name: 'E-commerce', link: '/formation/e-commerce' },
     { name: 'Pilotage de drone', link: '/formation/pilotage-drone' },
+    { name: 'Trading', link: '/formation/trading' },
 ]
 
 const navItems = [
@@ -96,13 +97,13 @@ export const NavBody: React.FC<{
             boxShadow: visible
                 ? '0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset'
                 : 'none',
-            width: visible ? '90%' : '100%',
+            width: '100%',
             y: visible ? 10 : 0,
         }}
         transition={{ type: 'spring', stiffness: 200, damping: 50 }}
         style={{ minWidth: '800px' }}
         className={cn(
-            'relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-3xl bg-white/80 px-3 py-1 md:flex border border-secondary',
+            'relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-3xl bg-white/80 px-4 md:px-6 lg:px-8 py-2 md:flex border border-secondary',
             visible && 'bg-white/90 shadow-lg',
             className
         )}>
@@ -142,7 +143,7 @@ export const NavItems: React.FC<{
     return (
         <nav
             className={cn(
-                'flex flex-row items-center gap-2 relative',
+                'flex flex-row items-center gap-6 relative',
                 className
             )}>
             {items.map((item, idx) => (
@@ -161,7 +162,7 @@ export const NavItems: React.FC<{
                                 }
                                 onMouseEnter={() => setHovered(idx)}
                                 onMouseLeave={() => setHovered(null)}
-                                className="relative px-4 py-2 text-lg font-medium text-muted-foreground hover:text-foreground focus:outline-none">
+                                className="relative px-4 py-2 text-lg font-medium text-muted-foreground hover:text-foreground focus:outline-none after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-0.5 after:w-0 after:bg-[var(--secondary)] hover:after:w-8 after:transition-all after:duration-300">
                                 {item.name}
                             </button>
                             <AnimatePresence>
@@ -189,13 +190,7 @@ export const NavItems: React.FC<{
                             href={item.link}
                             onMouseEnter={() => setHovered(idx)}
                             onClick={onItemClick}
-                            className="relative px-4 py-2 text-lg font-medium text-muted-foreground hover:text-foreground">
-                            {hovered === idx && (
-                                <motion.div
-                                    layoutId="hovered"
-                                    className="absolute inset-0 h-full w-full rounded-full bg-accent"
-                                />
-                            )}
+                            className="relative px-4 py-2 text-lg font-medium text-muted-foreground hover:text-foreground after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-0.5 after:w-0 after:bg-[var(--secondary)] hover:after:w-8 after:transition-all after:duration-300">
                             <span className="relative z-20">{item.name}</span>
                         </Link>
                     )}
@@ -281,11 +276,18 @@ export const MobileNav: React.FC<{
         }}
         transition={{ type: 'spring', stiffness: 200, damping: 50 }}
         className={cn(
-            'relative z-50 flex w-full flex-col items-center justify-between bg-white px-0 py-1 md:hidden border-b border-secondary',
-            visible && 'bg-white shadow-lg',
+            'relative z-50 flex w-full flex-col items-center justify-between md:hidden',
             className
         )}>
-        {children}
+        <div
+            className={cn(
+                'w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-4 py-1 border-b border-secondary bg-white',
+                visible && 'bg-white shadow-lg',
+            )}
+            style={{ boxSizing: 'border-box' }}
+        >
+            {children}
+        </div>
     </motion.div>
 )
 
@@ -325,7 +327,7 @@ export const MobileNavMenu: React.FC<{
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 className={cn(
-                    'absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-lg border border-secondary dark:bg-neutral-950',
+                    'absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-lg border border-secondary dark:bg-neutral-950 max-w-7xl mx-auto',
                     className
                 )}>
                 {children}
@@ -354,15 +356,33 @@ const Header: React.FC = () => {
             <NavBody>
                 <NavbarLogo />
                 <NavItems items={navItems} />
-                {/* Ajout d'espace entre les liens et les boutons */}
-                <div className="flex items-center gap-2 ms-8">
-                    <NavbarButton href="#" variant="secondary">
+                {/* Zone boutons alignée et espacée */}
+                <div className="flex items-center gap-3 md:gap-4 lg:gap-6 ms-4 md:ms-8">
+                    <NavbarButton 
+                        href="/brochure-futurcraft.pdf" 
+                        variant="secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                    >
                         Brochure
                     </NavbarButton>
-                    <NavbarButton href="#" variant="primary">
+                    <NavbarButton 
+                        href="/#portes-ouvertes" 
+                        variant="primary"
+                        onClick={(e) => {
+                            e.preventDefault()
+                            const element = document.getElementById('portes-ouvertes')
+                            if (element) {
+                                element.scrollIntoView({ behavior: 'smooth' })
+                            } else {
+                                window.location.href = '/#portes-ouvertes'
+                            }
+                        }}
+                    >
                         Portes Ouvertes
                     </NavbarButton>
-                    <NavbarButton href="#" variant="dark">
+                    <NavbarButton href="/candidater" variant="dark">
                         Candidater
                     </NavbarButton>
                 </div>
@@ -421,19 +441,33 @@ const Header: React.FC = () => {
                     )}
                     <div className="flex w-full flex-col gap-4 pt-4">
                         <NavbarButton
-                            href="#"
+                            href="/brochure-futurcraft.pdf"
                             variant="secondary"
-                            className="w-full">
+                            className="w-full"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download
+                        >
                             Brochure
                         </NavbarButton>
                         <NavbarButton
-                            href="#"
+                            href="/#portes-ouvertes"
                             variant="primary"
-                            className="w-full">
+                            className="w-full"
+                            onClick={(e) => {
+                                e.preventDefault()
+                                const element = document.getElementById('portes-ouvertes')
+                                if (element) {
+                                    element.scrollIntoView({ behavior: 'smooth' })
+                                } else {
+                                    window.location.href = '/#portes-ouvertes'
+                                }
+                            }}
+                        >
                             Portes Ouvertes
                         </NavbarButton>
                         <NavbarButton
-                            href="#"
+                            href="/candidater"
                             variant="dark"
                             className="w-full">
                             Candidater

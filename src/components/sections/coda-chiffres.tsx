@@ -45,12 +45,12 @@ export default function CodaChiffresSection() {
                             : ''
                     }`}>
                     <span className="text-[4.5rem] md:text-[5.5rem] font-extrabold text-[var(--secondary)] leading-none">
-                        2 à 4 ans
+                        6 ms à 2 ans
                     </span>
                     <p className="text-xl text-white text-right mt-2 max-w-[500px]">
-                        En alternance au sein d’une entreprise
+                        Pour une formation complète
                         <br />
-                        en suivant une formation chez FuturCraft INSTITUT
+                        et certifiante à FuturCraft INSTITUT
                     </p>
                 </div>
                 {/* Ligne 2 */}
@@ -60,12 +60,12 @@ export default function CodaChiffresSection() {
                         inView3 ? 'md:translate-x-0 opacity-100' : ''
                     }`}>
                     <span className="text-[4.5rem] md:text-[5.5rem] font-extrabold text-[var(--secondary)] leading-none">
-                        +105 000
+                        +20
                     </span>
                     <p className="text-xl text-white text-left mt-2 max-w-[500px]">
-                        Postes à pourvoir en informatique en France selon le
+                        entreprises partenaire pour 
                         <br />
-                        Ministère du Travail
+                        les stages et emplois
                     </p>
                 </div>
                 <div
@@ -76,7 +76,7 @@ export default function CodaChiffresSection() {
                             : ''
                     }`}>
                     <span className="text-[4.5rem] md:text-[5.5rem] font-extrabold text-[var(--secondary)] leading-none">
-                        35 000€
+                        150 000f CFA
                     </span>
                     <p className="text-xl text-white text-right mt-2 max-w-[500px]">
                         Le salaire moyen d’un développeur
