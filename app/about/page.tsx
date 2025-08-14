@@ -37,19 +37,19 @@ export default function About() {
         <div
             className="min-h-screen w-full flex flex-col items-center justify-start py-8 px-2 mt-20 md:px-2 bg-[#070526]"
             style={{ background: undefined }}>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl text-white font-bold p-4 md:p-10 flex justify-center items-center text-center">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl text-white font-bold p-4 md:p-10 flex justify-start md:justify-center items-center text-left md:text-center">
                 Le centre informatique <br /> qui forme des professionnels{' '}
                 <br /> engagés
             </h1>
-            <h2 className="text-base md:text-lg lg:text-2xl text-white font-bold flex justify-center items-center p-4 md:p-10 text-center">
+            <h2 className="text-base md:text-lg lg:text-2xl text-white font-bold flex justify-start md:justify-center items-center p-4 md:p-10 text-left md:text-center max-w-4xl md:max-w-6xl lg:max-w-5xl mx-auto">
                 FuturCraft INSTITUT est un centre <br />
-                de formation en informatique privée hors Parcoursup <br /> avec
+                de formation en informatique privée hors Parcours  avec
                 un enseignement moderne qui prépare ses étudiants au monde du
-                travail. <br /> Acteur local engagé pour un développement du
-                numérique <br />
+                travail.  Acteur local engagé pour un développement du
+                numérique 
                 qui minimise son impact sur l'environnement, FuturCraft INSTITUT{' '}
-                <br />
-                sensibilise et forme ses étudiants aux enjeux actuels et <br />
+                
+                sensibilise et forme ses étudiants aux enjeux actuels et 
                 futurs liés au numérique.
             </h2>
             {/* GALLERY */}

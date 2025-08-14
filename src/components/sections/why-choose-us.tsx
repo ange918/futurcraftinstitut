@@ -19,10 +19,10 @@ export default function WhyChooseUsSection() {
                     />
                 </svg>
             </div>
-            <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-12 px-2 md:px-8 z-10">
+            <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 px-2 md:px-8 z-10">
                 {/* Colonne gauche */}
-                <div className="flex-1 flex flex-col items-center w-1/2 justify-center gap-6 md:gap-8">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-[var(--foreground)] text-center md:text-left">
+                <div className="flex-1 flex flex-col items-center justify-center gap-6 md:gap-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-[var(--foreground)] text-center">
                         Pourquoi
                         <br />rejoindre FuturCraft INSTITUT ?
                     </h2>
@@ -40,7 +40,7 @@ export default function WhyChooseUsSection() {
                     
                 </div>
                 {/* Colonne droite */}
-                <div className="flex-1 flex flex-col gap-10 md:gap-16 mt-8 md:mt-0">
+                <div className="flex-1 flex flex-col gap-10 md:gap-16">
                     {/* Item 1 */}
                     <div className="flex items-start gap-4 md:gap-6">
                         <div className="flex flex-col items-center">

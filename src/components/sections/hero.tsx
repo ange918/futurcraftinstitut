@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full min-h-[80vh] flex flex-col items-center justify-center text-white overflow-hidden px-2 sm:px-4 md:px-4 pt-0 sm:pt-16 md:pt-28 lg:pt-36 pb-16 sm:pb-24 md:pb-32 lg:pb-44">
+        <section className="relative w-full min-h-[80vh] flex flex-col items-center justify-center text-white overflow-hidden px-2 sm:px-4 md:px-4 pt-0 sm:pt-16 md:pt-28 lg:pt-36 pb-8 sm:pb-24 md:pb-32 lg:pb-44">
             {/* Image de fond */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <img
@@ -18,10 +19,14 @@ export default function HeroSection() {
             <div className="w-full lg:max-w-7xl mx-auto px-2 sm:px-4 md:px-4 flex flex-col items-center gap-2 sm:gap-4 md:gap-6">
                 {/* Logo */}
                 <div className="w-full flex justify-center mb-2">
-                    <span className="block text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-none text-center">
-                        FuturCraft INSTITUT
-                        <span className="text-[var(--secondary)]">_</span>
-                    </span>
+                    <Image
+                        src="/image/Logo-ENTIERE-768x516.webp"
+                        alt="FuturCraft Institut"
+                        width={300}
+                        height={200}
+                        className="h-16 w-auto xs:h-20 sm:h-24 md:h-32 lg:h-40"
+                        priority
+                    />
                 </div>
                 {/* Titre principal */}
                 <h1 className="text-center font-black text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-6xl leading-tight mb-2 sm:mb-4 md:mb-6">

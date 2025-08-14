@@ -89,7 +89,7 @@ export default function MaitriseIaPage() {
                             MAÎTRISE IA
                         </div>
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-4 leading-tight">
-                            BAC+3 – Maîtrise IA
+                            1 Mois
                         </h1>
                         <div className="flex gap-3 mb-6">
                             <span className="px-5 py-2 rounded-full border border-foreground text-foreground text-base font-medium">

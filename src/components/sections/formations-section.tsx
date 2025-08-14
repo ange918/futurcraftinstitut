@@ -20,7 +20,7 @@ import {
 
 export default function FormationsSection() {
     return (
-        <section className="w-full bg-[#070526] flex flex-col items-center justify-center py-12 md:py-32 px-2 md:px-8">
+        <section className="w-full bg-[#070526] flex flex-col items-center justify-center py-8 md:py-32 px-2 md:px-8">
             <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white text-center mb-6 md:mb-8 relative w-fit mx-auto">
                 Découvrez nos formations
                 <span
@@ -309,7 +309,7 @@ export default function FormationsSection() {
                                 70.000 FCFA
                             </span>
                             <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">
-                                3 mois
+                                1 mois
                             </span>
                         </div>
                         <p className="text-[var(--card-foreground)] text-xs md:text-base mb-2 md:mb-6">
@@ -456,7 +456,9 @@ export default function FormationsSection() {
                             Trading
                         </span>
                         <h3 className="text-base md:text-xl lg:text-2xl font-bold mb-2 md:mb-4">
-                            Maîtrisez le ciel avec les drones professionnels
+                        Une formation intensive pour maîtriser les techniques de trading et 
+                            l'analyse des marchés financiers. Apprenez à trader en toute sécurité 
+                            avec une approche professionnelle.
                         </h3>
                         <div className="flex flex-row flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
                             <span className="px-4 py-0.5 rounded-full border border-[var(--secondary)] text-[var(--secondary)] text-base">

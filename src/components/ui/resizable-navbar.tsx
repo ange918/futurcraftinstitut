@@ -206,7 +206,7 @@ export const NavbarLogo: React.FC = () => {
             href="/"
             className="relative z-20 mr-4 flex items-center px-2 py-1">
             <Image
-                src="/image/Logo-ENTIERE-768x516.webp"
+                src="/image/log.png"
                 alt="FuturCraft Institut"
                 width={120}
                 height={80}
@@ -271,12 +271,10 @@ export const MobileNav: React.FC<{
             boxShadow: visible
                 ? '0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset'
                 : 'none',
-            width: visible ? '90%' : '100%',
-            y: visible ? 10 : 0,
         }}
         transition={{ type: 'spring', stiffness: 200, damping: 50 }}
         className={cn(
-            'relative z-50 flex w-full flex-col items-center justify-between md:hidden',
+            'fixed top-0 left-0 right-0 z-50 flex w-full flex-col items-center justify-between md:hidden',
             className
         )}>
         <div
@@ -327,7 +325,7 @@ export const MobileNavMenu: React.FC<{
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 className={cn(
-                    'absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-lg border border-secondary dark:bg-neutral-950 max-w-7xl mx-auto',
+                    'fixed inset-x-0 top-16 z-40 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-lg border border-secondary dark:bg-neutral-950 max-w-7xl mx-auto',
                     className
                 )}>
                 {children}
