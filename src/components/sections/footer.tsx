@@ -101,10 +101,6 @@ export default function Footer() {
                         <ul className="space-y-2">
                             <li>L'école</li>
                             <li>Journées Portes Ouvertes</li>
-                            <li>Cursus En 5 Ans</li>
-                            <li>Les campus</li>
-                            <li>Débouchés</li>
-                            <li>Modules de formation</li>
                         </ul>
                     </div>
                     {/* Entreprise */}
@@ -113,8 +109,6 @@ export default function Footer() {
                             Entreprise
                         </h3>
                         <ul className="space-y-2">
-                            <li>Recruter un étudiant</li>
-                            <li>Déposer une offre d'emploi</li>
                             <li>Rejoindre FuturCraft Institut</li>
                         </ul>
                     </div>
@@ -137,17 +131,17 @@ export default function Footer() {
                         </h3>
                         <div className="flex gap-3 justify-center sm:justify-start">
                             <a
-                                href="#"
+                                href="https://www.facebook.com/futurcraftinstitue"
                                 className="bg-[var(--secondary)] rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-[#181818] text-xl md:text-2xl hover:scale-110 transition">
                                 <FaFacebookF />
                             </a>
                             <a
-                                href="#"
+                                href="https://www.instagram.com/futurcraftinstitut?igsh=emp6c205NXd6OWc0"
                                 className="bg-[var(--secondary)] rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-[#181818] text-xl md:text-2xl hover:scale-110 transition">
                                 <FaInstagram />
                             </a>
                             <a
-                                href="#"
+                                href="https://www.tiktok.com/@futur.craft.insti?_t=ZM-8yysttUHo4E&_r=1"
                                 className="bg-[var(--secondary)] rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-[#181818] text-xl md:text-2xl hover:scale-110 transition">
                                 <FaTiktok />
                             </a>

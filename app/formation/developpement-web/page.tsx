@@ -3,25 +3,42 @@
 import { useState } from 'react'
 import { AnimatedTestimonials } from '../../../src/components/ui/AnimatedTestimonials'
 import Image from 'next/image'
-
 const testimonials = [
     {
-        src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=500&h=500&facepad=2',
-        name: 'Alice Dupont',
-        designation: 'Étudiante en Web',
-        quote: "J'ai adoré la formation, l'équipe pédagogique est très à l'écoute et les projets sont concrets !",
+        src: '/image/carmel.jpg',
+        name: 'Carmel DANGBEGNON',
+        designation: 'Prompt Engineer',
+        quote: 'Grâce à FuturCraft Institut, j\'ai ma soeur qui a pu acquérir des compétences concrètes et trouver un emploi rapidement. Les formateurs sont passionnés et toujours à l\'écoute.',
     },
     {
-        src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=500&h=500&facepad=2',
-        name: 'Mohamed Benali',
-        designation: 'Développeur Junior',
-        quote: "Grâce à FuturCraft, j'ai trouvé une alternance et j'ai pu progresser très vite.",
+        src: '/image/prego.jpg',
+        name: 'Président DJANGOUN',
+        designation: 'Influenceur artiste chanteur',
+        quote: 'La pédagogie est très pratique et adaptée au marché africain. J\'ai adoré les projets collaboratifs et l\'ambiance familiale du centre. En quelques mois de formation, leurs étudiants ont pu me créer mon site web personnel et celui de mon concert présidentiel.',
     },
     {
-        src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=500&h=500&facepad=2',
-        name: 'Sophie Martin',
-        designation: 'Graphiste',
-        quote: 'Les intervenants sont passionnés et nous transmettent leur savoir avec enthousiasme.',
+        src: '/image/wiliam.jpg',
+        name: 'William ZOMANHOUN',
+        designation: 'Promotteur  d\'évenement',
+        quote: 'Les outils et technologies enseignés sont à la pointe. J\'ai pu me spécialiser en Intélligence artificielle en quelques mois.',
+    },
+    {
+        src: '/image/houessinon.jpg',
+        name: 'Carlos HOUESSINON',
+        designation: 'Directeur d\'école',
+        quote: 'Former la nouvelle génération de talents africains est une fierté. Les étudiants sont motivés et les résultats sont là !',
+    },
+    {
+        src: '/image/nicodem.jpg',
+        name: 'Nicodème ATAKOUN',
+        designation: 'Directeur d\'école',
+        quote: 'FuturCraft Institut offre un environnement propice à l\'innovation et à l\'excellence. Je recommande vivement à tous les passionnés du numérique.',
+    },
+    {
+        src: '/image/cedric.jpg',
+        name: 'Cédric Magloire AKOFODJI',
+        designation: 'Développeur web',
+        quote: 'L\'approche pratique et moderne de FuturCraft est hors pair sur leurs cours sur l\'intelligence artificielle. Une formation exceptionnelle !',
     },
 ]
 
@@ -188,273 +205,6 @@ export default function DeveloppementWebPage() {
         },
     ]
 
-    const bachelors = [
-        {
-            title: 'Développeur Web Fullstack 1',
-            description:
-                'Découvre et commence à maîtriser les fondamentaux techniques du développement informatique.',
-            badges: ['1 100 heures', 'Initiale'],
-            details: (
-                <div className="mt-4 text-foreground/90 space-y-4">
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">Objectifs_</h4>
-                        <p>
-                            La 1ère année du parcours Développeur Web Fullstack
-                            prépare à la découverte et la maitrise des grands
-                            fondamentaux du développement informatique. Cette
-                            année permet de poser les bases pour des étudiants
-                            issus de cursus différents, de développer leurs
-                            compétences techniques via la découverte de
-                            différents stacks, et de les préparer à l'alternance
-                            en entreprise via du coaching étudiant et des cours
-                            transverses.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">Programme_</h4>
-                        <p>
-                            Le programme de cours de cette année se compose de 6
-                            unités d'enseignements pluridisciplinaires avec :
-                        </p>
-                        <ul className="list-disc ml-6">
-                            <li>1 100 heures de formation dont :</li>
-                            <li>600 heures de cours</li>
-                            <li>530 heures de projet</li>
-                        </ul>
-                        <ul className="list-disc ml-6 mt-2">
-                            <li>
-                                <b>Développement et intégration :</b>{' '}
-                                Introduction à Java, Backend PHP, Programmation
-                                bas niveau, Web Fullstack, JavaScript,
-                                Intégration HTML/CSS, Langage SQL, Versionning
-                                GIT, Initiation à Wordpress
-                            </li>
-                            <li>
-                                <b>Business :</b> Communication en entreprise,
-                                Fonctionnement des entreprises, Coaching CV,
-                                Anglais, Présentation et networking
-                            </li>
-                            <li>
-                                <b>Ouverture :</b> Fresque du climat, Séminaire,
-                                Ethique et responsabilité du développeur
-                            </li>
-                            <li>
-                                <b>Produit :</b> Eco conception, Fondamentaux
-                                UI/UX, Gestion de projet
-                            </li>
-                            <li>
-                                <b>Système :</b> GNU/Linux, Initiation à la
-                                cybersécurité
-                            </li>
-                            <li>
-                                <b>Transverse :</b> Techniques de mémorisation,
-                                Hackathon, Projet d'entreprise, Heures flexibles
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">
-                            Les temps forts_
-                        </h4>
-                        <ul className="list-disc ml-6">
-                            <li>
-                                <b>Séminaire d'intégration et de cohésion :</b>{' '}
-                                Avant votre rentrée universitaire, vous partez
-                                en séminaire pendant 4 jours avec tous vos
-                                camarades afin de faire connaissance autour
-                                d'activités ludiques et de booster la cohésion
-                                de la promotion.
-                            </li>
-                            <li>
-                                <b>Hackathon :</b> En groupe, vous travaillez
-                                pendant une ou plusieurs journées sur une
-                                problématique réelle apportée par un
-                                professionnel de l'une de nos entreprises
-                                partenaires.
-                            </li>
-                            <li>
-                                <b>Game jam :</b> Vous êtes mis en situation de
-                                développement d'un jeu vidéo en groupe pendant
-                                48h.
-                            </li>
-                            <li>
-                                <b>Projet Fullstack :</b> En fin d'année, vous
-                                travaillez 3 semaines sur un projet en
-                                autonomie, à présenter lors d'une soutenance,
-                                qui mobilise toutes les compétences développées
-                                au cours de l'année.
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">
-                            Les pré-requis_
-                        </h4>
-                        <p>
-                            Le parcours Développeur Web Fullstack 1 est ouvert à
-                            tous les profils curieux et motivés de découvrir le
-                            monde de l'informatique afin d'en faire leur projet
-                            professionnel. Leur profil et leur motivation sont
-                            évalués par notre Responsable des Admissions lors
-                            des différents entretiens. Avoir suivi une filière
-                            générale option NSI ou une filière STI2D est un
-                            plus.
-                        </p>
-                    </div>
-                </div>
-            ),
-        },
-        {
-            title: 'Développeur Web Fullstack 2',
-            description:
-                "Renforce ton expertise technique avec de nouveaux stacks et professionnalise-toi avec l'alternance.",
-            badges: ['590 heures', 'Initiale ou Alternance'],
-            details: (
-                <div className="mt-4 text-foreground/90 space-y-4">
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">
-                            Conditions d'éligibilité et modalités d'admission_
-                        </h4>
-                        <p>
-                            Le Bachelor est ouvert à tous les lycéens, étudiants
-                            ou personnes en reconversion. Aucun prérequis
-                            pédagogique n'est nécessaire.
-                        </p>
-                        <p>
-                            Les inscriptions se font hors Parcoursup, après
-                            étude du dossier de candidature et un entretien
-                            d'admission. L'admissibilité chez Coda est
-                            conditionnée à la réussite de 2 entretiens
-                            successifs&nbsp;: un entretien en visio de 20mn puis
-                            un entretien de motivation de 1h dans les locaux de
-                            l'école. Une réponse positive ou négative est donnée
-                            48h après le 2<sup>nd</sup> entretien.
-                        </p>
-                        <p>
-                            Pour les admissions directes en 3<sup>ème</sup>{' '}
-                            année, le passage d'un test technique de 45min est
-                            demandé afin de valider l'adéquation entre le niveau
-                            de l'élève et le programme suivi.
-                        </p>
-                        <p>
-                            Les étudiants qui auraient déjà validé un ou
-                            plusieurs blocs de compétences du titre RNCP doivent
-                            revalider ces blocs dans le cadre des évaluations
-                            continues et des jurys finaux. Ceci dans le but
-                            d'assurer la cohérence pédagogique du programme
-                            dispensé et le bon niveau de compétence des
-                            étudiants qui sortent de l'école.
-                        </p>
-                    </div>
-                </div>
-            ),
-        },
-        {
-            title: 'Développeur Web Fullstack 3',
-            description:
-                'Découvre et commence à maîtriser les fondamentaux techniques du développement informatique.',
-            badges: ['435 heures', 'Alternance'],
-            details: (
-                <div className="mt-4 text-foreground/90 space-y-4">
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">Objectifs_</h4>
-                        <p>
-                            La 3ème année du parcours Développeur Web Fullstack
-                            s'effectue uniquement en alternance. On vient
-                            davantage renforcer les compétences techniques en
-                            intégrant de nouveaux stacks ainsi que différentes
-                            spécialisations en vue d'une potentielle poursuite
-                            d'études en Master. L'insertion sur le marché du
-                            travail est également renforcée avec un rythme
-                            d'alternance à 75% en entreprise.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">Programme_</h4>
-                        <p>
-                            Le programme de cours de cette année se compose de 6
-                            unités d'enseignements pluridisciplinaires avec :
-                        </p>
-                        <ul className="list-disc ml-6">
-                            <li>435 heures de formation dont :</li>
-                            <li>310 heures de cours</li>
-                            <li>125 heures de projet</li>
-                        </ul>
-                        <ul className="list-disc ml-6 mt-2">
-                            <li>
-                                <b>Développement et intégration :</b>{' '}
-                                Approfondissement React, Node.js, Framework CSS,
-                                SEO, API, Design pattern
-                            </li>
-                            <li>
-                                <b>Spécialités :</b> Jeux vidéos, Cybersécurité,
-                                Data, Machine Learning
-                            </li>
-                            <li>
-                                <b>Ouverture :</b> Séminaire
-                            </li>
-                            <li>
-                                <b>Produit :</b> Eco conception, Gestion agile,
-                                Introduction à SCRUM
-                            </li>
-                            <li>
-                                <b>Système :</b> Docker
-                            </li>
-                            <li>
-                                <b>Transverse :</b> Algorithmie appliquée à
-                                l'IA, Projet final
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">
-                            Les temps forts_
-                        </h4>
-                        <ul className="list-disc ml-6">
-                            <li>
-                                <b>L'alternance :</b> La professionnalisation de
-                                l'étudiant est renforcée par un rythme
-                                d'alternance à 75% en entreprise et 25% en cours
-                            </li>
-                            <li>
-                                <b>Les spécialisations :</b> Il vous est
-                                possible de vous spécialiser dans différents
-                                modules de votre choix afin d'élargir votre
-                                champs de compétences et de vous préparer à
-                                votre poursuite d'études en Master.
-                            </li>
-                            <li>
-                                <b>Le projet de fin d'études :</b> C'est un
-                                projet final qui permet d'utiliser toutes les
-                                compétences vues au cours des 3 années (front
-                                end, back end, gestion de données, design,...)
-                                et qui permet de préparer au mieux les étudiants
-                                au passage du jury de fin d'année pour la
-                                validation du diplôme.
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-1">
-                            Les pré-requis_
-                        </h4>
-                        <p>
-                            Le parcours Développeur Web Fullstack 3 est ouvert
-                            aux étudiants de 2ème année ayant validé leurs
-                            unités d'enseignements. L'alternance en entreprise
-                            étant obligatoire, l'étudiant doit avoir signé un
-                            contrat d'alternance au plus tard fin Novembre pour
-                            rejoindre la formation. Les admissions directes en
-                            3ème année sont ouvertes pour les étudiants
-                            souhaitant poursuivre leurs études, sous réserve de
-                            la réussite d'une évaluation technique, attestant de
-                            leur niveau de compétences.
-                        </p>
-                    </div>
-                </div>
-            ),
-        },
-    ]
 
     const formations = [
         {
@@ -561,17 +311,13 @@ export default function DeveloppementWebPage() {
                         </h2>
                         <div className="flex flex-wrap gap-3 mb-6">
                             <span className="px-5 py-2 rounded-full border border-muted-foreground text-muted-foreground text-base font-medium bg-background">
-                                3 ans
+                                2 ans
                             </span>
                             <span className="px-5 py-2 rounded-full border border-muted-foreground text-muted-foreground text-base font-medium bg-background">
-                                Alternance dès B2
+                            300.000 FCFA/An
                             </span>
-                            <span className="px-5 py-2 rounded-full border border-muted-foreground text-muted-foreground text-base font-medium bg-background">
-                                Admission B1 & B3
-                            </span>
-                            <span className="px-5 py-2 rounded-full border border-muted-foreground text-muted-foreground text-base font-medium bg-background">
-                                bac+3
-                            </span>
+                           
+                          
                         </div>
                         <p className="text-lg text-foreground/90 mb-2">
                             La formation de développeur web est faite pour toi
@@ -618,71 +364,7 @@ export default function DeveloppementWebPage() {
 
             </section>
 
-            {/* Cartes Bachelor Accordéon */}
-            <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row gap-12 items-start mt-4 pb-24">
-                <div className="flex-1 flex flex-col gap-6">
-                    {bachelors.map((bachelor, idx) => (
-                        <div
-                            key={bachelor.title}
-                            className="bg-background border border-muted rounded-2xl p-6 shadow-sm flex flex-col gap-4 transition-all">
-                            <div
-                                className="flex items-center justify-between cursor-pointer"
-                                onClick={() =>
-                                    setOpenBachelor(
-                                        openBachelor === idx ? null : idx
-                                    )
-                                }>
-                                <h3 className="text-2xl md:text-3xl font-extrabold text-foreground mb-2">
-                                    {bachelor.title}
-                                    <span className="text-secondary">_</span>
-                                </h3>
-                                <button
-                                    className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-muted text-2xl text-foreground font-bold hover:bg-muted transition-colors focus:outline-none"
-                                    aria-label={
-                                        openBachelor === idx
-                                            ? 'Fermer'
-                                            : 'Ouvrir'
-                                    }
-                                    tabIndex={-1}>
-                                    {openBachelor === idx ? '×' : '+'}
-                                </button>
-                            </div>
-                            <p className="text-muted-foreground mb-2">
-                                {bachelor.description}
-                            </p>
-                            <div className="flex gap-3 mt-2">
-                                {bachelor.badges.map((badge, i) => (
-                                    <span
-                                        key={i}
-                                        className="px-5 py-2 rounded-full border border-muted-foreground text-muted-foreground text-base font-medium bg-background">
-                                        {badge}
-                                    </span>
-                                ))}
-                            </div>
-                            {openBachelor === idx && (
-                                <div className="animate-fade-in mt-2">
-                                    {bachelor.details}
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
-            </div>
-            {/* Demi-cercle décoratif en bas de la section Bachelor */}
-            <div
-                className="relative w-full overflow-hidden mt-0"
-                style={{ height: '100px' }}>
-                <svg
-                    viewBox="0 0 1600 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-full h-full">
-                    <path
-                        d="M0,0 Q800,100 1600,0 L1600,100 L0,100 Z"
-                        fill="#0a0a1a"
-                    />
-                </svg>
-            </div>
+        
 
             {/* Le diplôme Coda_ */}
             <section className="relative bg-[#0a0a1a] pt-24 pb-20 overflow-hidden">
@@ -718,19 +400,19 @@ export default function DeveloppementWebPage() {
                             <span className="text-secondary">_</span>
                         </h2>
                         <p className="text-lg text-white/90">
-                            Le Bachelor Développeur Fullstack délivre un diplôme{' '}
-                            <b>de niveau Bac+3 (titre RNCP6)</b> reconnu par
+                            FuturCraft INSTITUT délivre un diplôme{' '}
+                            <b>de Developpeur Web en deux ans </b> reconnu par
                             l'Etat. A l'issue de la formation, il vous est
                             possible de vous insérer directement sur le marché
-                            du travail ou de poursuivre vos études dans l'un de
-                            nos Masters pour préparer un diplôme de niveau Bac+5
-                            (titre RNCP7).
+                            du travail ou de poursuivre vos études
+            
+    
                         </p>
                     </div>
                     {/* Badge à droite */}
                     <div className="flex-1 flex items-center justify-center">
                         <img
-                            src="/images/Logo-ENTIERE-768x516.webp"
+                            src="/images/log.png"
                             alt="le diplôme FuturCraft Institut"
                             className="w-[320px] h-auto object-contain drop-shadow-2xl rounded-2xl bg-white p-4"
                         />

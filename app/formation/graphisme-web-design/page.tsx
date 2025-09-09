@@ -57,22 +57,40 @@ export default function GraphismeWebDesignPage() {
 
     const testimonials = [
         {
-            src: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=500&h=500&facepad=2',
-            name: 'Alice Dupont',
-            designation: 'Étudiante en Web',
-            quote: "J'ai adoré la formation, l'équipe pédagogique est très à l'écoute et les projets sont concrets !",
+            src: '/image/carmel.jpg',
+            name: 'Carmel DANGBEGNON',
+            designation: 'Prompt Engineer',
+            quote: 'Grâce à FuturCraft Institut, j\'ai ma soeur qui a pu acquérir des compétences concrètes et trouver un emploi rapidement. Les formateurs sont passionnés et toujours à l\'écoute.',
         },
         {
-            src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=500&h=500&facepad=2',
-            name: 'Mohamed Benali',
-            designation: 'Développeur Junior',
-            quote: "Grâce à FuturCraft, j'ai trouvé une alternance et j'ai pu progresser très vite.",
+            src: '/image/prego.jpg',
+            name: 'Président DJANGOUN',
+            designation: 'Influenceur artiste chanteur',
+            quote: 'La pédagogie est très pratique et adaptée au marché africain. J\'ai adoré les projets collaboratifs et l\'ambiance familiale du centre. En quelques mois de formation, leurs étudiants ont pu me créer mon site web personnel et celui de mon concert présidentiel.',
         },
         {
-            src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=500&h=500&facepad=2',
-            name: 'Sophie Martin',
-            designation: 'Graphiste',
-            quote: 'Les intervenants sont passionnés et nous transmettent leur savoir avec enthousiasme.',
+            src: '/image/wiliam.jpg',
+            name: 'William ZOMANHOUN',
+            designation: 'Promotteur  d\'évenement',
+            quote: 'Les outils et technologies enseignés sont à la pointe. J\'ai pu me spécialiser en Intélligence artificielle en quelques mois.',
+        },
+        {
+            src: '/image/houessinon.jpg',
+            name: 'Carlos HOUESSINON',
+            designation: 'Directeur d\'école',
+            quote: 'Former la nouvelle génération de talents africains est une fierté. Les étudiants sont motivés et les résultats sont là !',
+        },
+        {
+            src: '/image/nicodem.jpg',
+            name: 'Nicodème ATAKOUN',
+            designation: 'Directeur d\'école',
+            quote: 'FuturCraft Institut offre un environnement propice à l\'innovation et à l\'excellence. Je recommande vivement à tous les passionnés du numérique.',
+        },
+        {
+            src: '/image/cedric.jpg',
+            name: 'Cédric Magloire AKOFODJI',
+            designation: 'Développeur web',
+            quote: 'L\'approche pratique et moderne de FuturCraft est hors pair sur leurs cours sur l\'intelligence artificielle. Une formation exceptionnelle !',
         },
     ]
 
@@ -87,7 +105,7 @@ export default function GraphismeWebDesignPage() {
                             GRAPHISME WEB DESIGN
                         </div>
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-4 leading-tight">
-                            BAC+2 – Graphisme web design
+                            1 AN
                         </h1>
                         <div className="flex gap-3 mb-6">
                             <span className="px-5 py-2 rounded-full border border-foreground text-foreground text-base font-medium">
@@ -146,7 +164,7 @@ export default function GraphismeWebDesignPage() {
                         </h2>
                         <div className="flex flex-wrap gap-3 mb-6">
                             <span className="px-5 py-2 rounded-full border border-muted-foreground text-muted-foreground text-base font-medium bg-background">
-                                2 ans
+                                1 ans
                             </span>
                             <span className="px-5 py-2 rounded-full border border-muted-foreground text-muted-foreground text-base font-medium bg-background">
                                 Web Design
@@ -165,52 +183,7 @@ export default function GraphismeWebDesignPage() {
                     </div>
                 </div>
             </section>
-            {/* Accordéon (modules ou parcours) */}
-            <div className="container mx-auto max-w-6xl flex flex-col gap-12 items-start mt-4 pb-24">
-                <div className="flex-1 flex flex-col gap-6">
-                    {[
-                        'Création graphique',
-                        'Web design & UX/UI',
-                        'Identité visuelle',
-                        'Projets digitaux',
-                    ].map((module, idx) => (
-                        <div
-                            key={module}
-                            className="bg-background border border-muted rounded-2xl p-6 shadow-sm flex flex-col gap-4 transition-all">
-                            <div
-                                className="flex items-center justify-between cursor-pointer"
-                                onClick={() =>
-                                    setOpenBachelor(
-                                        openBachelor === idx ? null : idx
-                                    )
-                                }>
-                                <h3 className="text-2xl md:text-3xl font-extrabold text-foreground mb-2">
-                                    {module}
-                                    <span className="text-secondary">_</span>
-                                </h3>
-                                <button
-                                    className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-muted text-2xl text-foreground font-bold hover:bg-muted transition-colors focus:outline-none"
-                                    aria-label={
-                                        openBachelor === idx
-                                            ? 'Fermer'
-                                            : 'Ouvrir'
-                                    }
-                                    tabIndex={-1}>
-                                    {openBachelor === idx ? '×' : '+'}
-                                </button>
-                            </div>
-                            {openBachelor === idx && (
-                                <div className="animate-fade-in mt-2 text-muted-foreground">
-                                    <p>
-                                        Contenu détaillé sur {module} (à
-                                        personnaliser selon le programme réel).
-                                    </p>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
-            </div>
+          
             {/* Section diplôme */}
             <section className="relative bg-[#0a0a1a] pt-24 pb-20 overflow-hidden">
                 <div className="container mx-auto max-w-6xl relative z-10 flex flex-col md:flex-row items-center justify-between gap-16">

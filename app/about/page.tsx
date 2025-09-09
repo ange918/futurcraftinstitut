@@ -28,9 +28,9 @@ export default function About() {
     useEffect(() => {
         setMounted(true)
     }, [])
-
-    const citation =
-        "Offrir une éducation d'excellence en informatique dans des villes et des régions qui souffrent d'un manque de professionnels expérimentés."
+    const citation = "Nous formons l’élite de demain en Tech et numérique.\n" +
+    "À Cotonou, Calavi et dans les villes environnantes, où la demande de talents qualifiés dépasse largement l’offre, FuturCraft Institut prépare une nouvelle génération de professionnels capables de transformer les défis en opportunités.";
+    
     const citationWords = citation.split(' ')
 
     return (
@@ -158,14 +158,12 @@ export default function About() {
                             <span className="inline-block align-middle ml-2 w-10 h-2 bg-[#4f00ff] rounded"></span>
                         </h2>
                         <p className="text-base md:text-lg text-[#1a093e] mb-6">
-                            Les développeurs informatiques sont une ressource de
-                            plus en plus rare sur le marché du travail. Le
-                            Ministère du Travail fait état de plus de{' '}
-                            <span className="font-bold">105 000 postes</span> à
-                            pourvoir dans le numérique.
+                        Au Bénin, le marché de l’emploi connaît un déséquilibre marqué : de nombreux jeunes diplômés arrivent chaque année, mais les offres restent insuffisantes. Cette réalité souligne l’importance de l’entrepreneuriat et de la formation pratique comme leviers d’avenir.
+
+FuturCraft Institut s’inscrit dans cette dynamique en préparant une nouvelle génération de professionnels et d’entrepreneurs capables de relever les défis économiques et technologiques du pays.
                         </p>
                         <p className="text-base md:text-lg text-[#1a093e]">
-                            La pénurie de professionnels expérimentés en IT et
+                            La pénurie de professionnels expérimentés au Bénin et
                             capables d'engager leur organisation dans la
                             transition écologique est particulièrement forte
                             dans les villes de moins de 500 000 habitants.
@@ -287,9 +285,8 @@ export default function About() {
                                         Le numérique accessible à tous
                                     </h3>
                                     <p className="text-base md:text-lg text-[var(--muted-foreground)]">
-                                        FuturCraft INSTITUT s'implante en région pour offrir
-                                        des formations en informatique au plus
-                                        grand nombre.
+                                     FuturCraft Institut s’implante au cœur de la ville de Calavi afin de rendre les formations en informatique accessibles au plus grand nombre situés hors Cotonou.
+
                                     </p>
                                 </div>
                             </div>
@@ -324,9 +321,8 @@ export default function About() {
                                         La sobriété numérique
                                     </h3>
                                     <p className="text-base md:text-lg text-[var(--muted-foreground)]">
-                                        FuturCraft INSTITUT sensibilise aux enjeux d'un
-                                        numérique plus responsable envers
-                                        l'environnement.
+                                    FuturCraft Institut prépare ses étudiants aux enjeux actuels et futurs du marché de l’emploi numérique, en mettant l’accent sur l’innovation et la pratique.
+
                                     </p>
                                 </div>
                             </div>
@@ -366,10 +362,7 @@ export default function About() {
                                         L'inclusivité dans la tech
                                     </h3>
                                     <p className="text-base md:text-lg text-[var(--muted-foreground)]">
-                                    FuturCraft INSTITUT souhaite mettre en lumière tous les
-                                        profils dans la tech, notamment les
-                                        femmes, trop souvent sous-représentées
-                                        dans le monde la tech.
+                                    FuturCraft Institut valorise la diversité des profils et s’engage à promouvoir une meilleure représentation des femmes et des jeunes dans le domaine technologique.
                                     </p>
                                 </div>
                             </div>
@@ -573,11 +566,9 @@ export default function About() {
                                 </span>
                             </h3>
                             <p className="text-base md:text-lg text-[#1a093e] mb-1 md:mb-2">
-                                FuturCraft a à cœur de proposer une expérience
-                                optimale pour tous ses étudiants. Cette ambition
-                                se traduit par l'instauration de moments
-                                d'intégration et de cohésion avant la rentrée et
-                                pendant l'année.
+                            FuturCraft a à cœur de proposer une expérience optimale pour tous ses étudiants. Cette ambition se traduit par l'instauration de moments d'intégration et de cohésion avant la rentrée et pendant l'année.
+
+Au programme : Le rendez-vous de L'expert , Excursion , Anniversaire des étudiants , séance d'intégration avec les étudiants d'autres écoles... Le tout dans un cadre convivial afin de briser la glace et de faire connaissance au sein de la promotion.
                             </p>
                             <p className="text-base md:text-lg text-[#1a093e]">
                                 Au programme : des activités de team building,
@@ -637,50 +628,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                {/* Bloc 3 : Image gauche, texte droite */}
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-8 md:mb-24 w-full max-w-6xl mx-auto">
-                    <div className="flex-1 flex justify-center items-center w-full">
-                        <img
-                            src="/image/hero.jpg"
-                            alt="Vie de campus"
-                            className="rounded-2xl md:rounded-3xl shadow-xl w-full max-w-xs md:max-w-xl object-cover h-48 md:h-[500px]"
-                        />
-                    </div>
-                    <div className="flex-1 relative w-full">
-                        <div className="border border-gray-300 rounded-xl md:rounded-2xl p-4 md:p-10 bg-white shadow-md relative">
-                            {/* Coins violets */}
-                            <span className="absolute top-0 right-0 w-6 md:w-10 h-2 md:h-3 bg-[#5b1fff] rounded-tr-lg"></span>
-                            <span className="absolute top-0 right-0 w-2 md:w-3 h-6 md:h-10 bg-[#5b1fff] rounded-tl-lg"></span>
-                            <span className="absolute left-0 bottom-0 w-6 md:w-10 h-2 md:h-3 bg-[#5b1fff] rounded-tr-lg"></span>
-                            <span className="absolute left-0 bottom-0 w-2 md:w-3 h-6 md:h-10 bg-[#5b1fff] rounded-tl-lg mb-1 md:mb-3"></span>
-                            <h3 className="text-lg md:text-3xl font-bold text-[#1a093e] mb-2 md:mb-4 relative w-fit">
-                                La vie de campus
-                                <span
-                                    className="inline-block align-baseline relative"
-                                    style={{
-                                        width: '2.2rem',
-                                        height: '0.3rem',
-                                        marginLeft: '0.3rem',
-                                    }}>
-                                    <span className="absolute left-0 bottom-0 h-1 w-6 bg-[var(--secondary)] rounded"></span>
-                                </span>
-                            </h3>
-                            <p className="text-base md:text-lg text-[#1a093e] mb-1 md:mb-2">
-                                Les campus FuturCraft ont une dynamique propice
-                                aux études et à la réalisation de projets en
-                                groupe.
-                            </p>
-                            <p className="text-base md:text-lg text-[#1a093e]">
-                                En parallèle, les élèves profitent d'une vie
-                                étudiante riche et diversifiée avec des
-                                événements à thème, associations étudiantes,
-                                bornes d'arcade, baby-foot, billard, job datings
-                                et conférences, les étudiants n'ont pas le temps
-                                de s'ennuyer chez FuturCraft !
-                            </p>
-                        </div>
-                    </div>
-                </div>
+              
                 {/* Bloc 4 : Texte gauche, image droite */}
                 <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-12 w-full max-w-6xl mx-auto">
                     <div className="flex-1 flex justify-center items-center w-full">
