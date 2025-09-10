@@ -122,6 +122,8 @@ export const NavItems = ({ items, className, onItemClick, visible }: NavItemsPro
       onMouseLeave={() => setHovered(null)}
       animate={{
         gap: visible ? "0.25rem" : "0.5rem",
+        marginLeft: visible ? "2rem" : "0rem",
+        justifyContent: visible ? "flex-start" : "center",
       }}
       transition={{
         type: "spring",
@@ -129,7 +131,7 @@ export const NavItems = ({ items, className, onItemClick, visible }: NavItemsPro
         damping: 50,
       }}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex",
+        "absolute inset-0 hidden flex-1 flex-row items-center text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex",
         className,
       )}
     >
@@ -138,8 +140,8 @@ export const NavItems = ({ items, className, onItemClick, visible }: NavItemsPro
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
           animate={{
-            paddingLeft: visible ? "0.5rem" : "1rem",
-            paddingRight: visible ? "0.5rem" : "1rem",
+            paddingLeft: visible ? "0.75rem" : "1rem",
+            paddingRight: visible ? "0.75rem" : "1rem",
             fontSize: visible ? "0.8rem" : "0.875rem",
           }}
           transition={{
