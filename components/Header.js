@@ -1,1 +1,1 @@
-export { default } from '../src/components/ui/resizable-navbar'
+export { default } from '../src/components/sections/Header'
