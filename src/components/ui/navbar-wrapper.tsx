@@ -20,7 +20,8 @@ export default function NavbarWrapper() {
                         <motion.div 
                             className="flex items-center" 
                             animate={{
-                                gap: visible ? "0.5rem" : "1rem",
+                                gap: visible ? "0.25rem" : "1rem",
+                                scale: visible ? 0.75 : 1,
                             }}
                             transition={{
                                 type: "spring",
@@ -28,15 +29,33 @@ export default function NavbarWrapper() {
                                 damping: 50,
                             }}
                         >
-                            <NavbarButton href="/brochure" variant="secondary" visible={visible}>
-                                Brochure
-                            </NavbarButton>
-                            <NavbarButton href="/portes-ouvertes" variant="primary" visible={visible}>
-                                Portes Ouvertes
-                            </NavbarButton>
-                            <NavbarButton href="/candidater" variant="dark" visible={visible}>
-                                Candidater
-                            </NavbarButton>
+                            {visible ? (
+                                // Version compacte quand rétréci
+                                <>
+                                    <NavbarButton href="/brochure" variant="secondary" visible={visible}>
+                                        B
+                                    </NavbarButton>
+                                    <NavbarButton href="/portes-ouvertes" variant="primary" visible={visible}>
+                                        PO
+                                    </NavbarButton>
+                                    <NavbarButton href="/candidater" variant="dark" visible={visible}>
+                                        C
+                                    </NavbarButton>
+                                </>
+                            ) : (
+                                // Version normale
+                                <>
+                                    <NavbarButton href="/brochure" variant="secondary" visible={visible}>
+                                        Brochure
+                                    </NavbarButton>
+                                    <NavbarButton href="/portes-ouvertes" variant="primary" visible={visible}>
+                                        Portes Ouvertes
+                                    </NavbarButton>
+                                    <NavbarButton href="/candidater" variant="dark" visible={visible}>
+                                        Candidater
+                                    </NavbarButton>
+                                </>
+                            )}
                         </motion.div>
                     </>
                 )}
