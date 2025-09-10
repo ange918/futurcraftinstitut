@@ -18,10 +18,10 @@ export default function NavbarWrapper() {
                         <NavbarLogo />
                         <NavItems items={navItems} visible={visible} />
                         <motion.div 
-                            className="flex items-center" 
+                            className="flex items-center flex-shrink-0" 
                             animate={{
                                 gap: visible ? "0.25rem" : "1rem",
-                                scale: visible ? 0.85 : 1,
+                                scale: visible ? 0.8 : 1,
                             }}
                             transition={{
                                 type: "spring",

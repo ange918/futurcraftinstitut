@@ -104,8 +104,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent lg:flex dark:bg-transparent",
-        visible ? "px-2 py-1" : "px-4 py-2",
+        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center self-start rounded-full bg-transparent lg:flex dark:bg-transparent",
+        visible ? "px-3 py-1 justify-between" : "px-4 py-2 justify-between",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className,
       )}
@@ -130,7 +130,7 @@ export const NavItems = ({ items, className, onItemClick, visible }: NavItemsPro
         damping: 50,
       }}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex",
+        "flex flex-row items-center justify-center text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800",
         className,
       )}
     >
