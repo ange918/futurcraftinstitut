@@ -6,7 +6,7 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-} from "motion/react";
+} from "framer-motion";
 
 import React, { useRef, useState } from "react";
 
@@ -17,7 +17,7 @@ interface NavbarProps {
 }
 
 interface NavBodyProps {
-  children: React.ReactNode;
+  children: React.ReactNode | ((props: { visible: boolean }) => React.ReactNode);
   className?: string;
   visible?: boolean;
 }
@@ -29,6 +29,7 @@ interface NavItemsProps {
   }[];
   className?: string;
   onItemClick?: () => void;
+  visible?: boolean;
 }
 
 interface MobileNavProps {
@@ -108,27 +109,45 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         className,
       )}
     >
-      {children}
+      {typeof children === 'function' ? children({ visible: visible || false }) : children}
     </motion.div>
   );
 };
 
-export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
+export const NavItems = ({ items, className, onItemClick, visible }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <motion.div
       onMouseLeave={() => setHovered(null)}
+      animate={{
+        gap: visible ? "0.25rem" : "0.5rem",
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 200,
+        damping: 50,
+      }}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex",
         className,
       )}
     >
       {items.map((item, idx) => (
-        <a
+        <motion.a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          animate={{
+            paddingLeft: visible ? "0.5rem" : "1rem",
+            paddingRight: visible ? "0.5rem" : "1rem",
+            fontSize: visible ? "0.8rem" : "0.875rem",
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 50,
+          }}
+          className="relative py-2 text-neutral-600 dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}
         >
@@ -139,7 +158,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             />
           )}
           <span className="relative z-20">{item.name}</span>
-        </a>
+        </motion.a>
       ))}
     </motion.div>
   );
@@ -254,6 +273,7 @@ export const NavbarButton = ({
   children,
   className,
   variant = "primary",
+  visible,
   ...props
 }: {
   href?: string;
@@ -261,6 +281,7 @@ export const NavbarButton = ({
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
+  visible?: boolean;
 } & (
   | React.ComponentPropsWithoutRef<"a">
   | React.ComponentPropsWithoutRef<"button">
@@ -278,12 +299,24 @@ export const NavbarButton = ({
   };
 
   return (
-    <Tag
-      href={href || undefined}
-      className={cn(baseStyles, variantStyles[variant], className)}
-      {...props}
+    <motion.div
+      animate={{
+        scale: visible ? 0.8 : 1,
+        gap: visible ? "0.25rem" : "1rem",
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 200,
+        damping: 50,
+      }}
     >
-      {children}
-    </Tag>
+      <Tag
+        href={href || undefined}
+        className={cn(baseStyles, variantStyles[variant], className)}
+        {...props}
+      >
+        {children}
+      </Tag>
+    </motion.div>
   );
 };
