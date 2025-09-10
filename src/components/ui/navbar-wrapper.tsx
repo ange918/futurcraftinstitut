@@ -20,7 +20,8 @@ export default function NavbarWrapper() {
                         <motion.div 
                             className="flex items-center" 
                             animate={{
-                                gap: visible ? "0.5rem" : "1rem",
+                                gap: visible ? "0.25rem" : "1rem",
+                                scale: visible ? 0.85 : 1,
                             }}
                             transition={{
                                 type: "spring",
