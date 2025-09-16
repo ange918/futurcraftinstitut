@@ -8,10 +8,6 @@ const nextConfig: NextConfig = {
     typescript: {
         ignoreBuildErrors: true,
     },
-    // Allow all hosts for Replit proxy
-    experimental: {
-        allowedRevalidateHeaderKeys: ['*'],
-    },
     // Configure server options for Replit
     async rewrites() {
         return []
